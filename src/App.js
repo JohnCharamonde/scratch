@@ -1,9 +1,10 @@
 import React from 'react';
+import Navbar from './Components/navbar.jsx'
 
 function App() {
   return (
     <div>
-      <div>HELLLOOOOOOOOOOOOO</div>
+      <Navbar />
     </div>
   );
 }
