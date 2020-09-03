@@ -6,8 +6,8 @@ function Navbar() {
     <div style= {{"display":"flex", "alignItems":"center", "height": "5%", "justifyContent": "space-between", "color": "white"}}>
       
       <div style={{"display":"flex", "alignItems":"center"}}>  
-        <div style={{"fontWeight":700, "fontSize": "30px", "margin-right": "5%", "margin-left": "5%"}}>
-          <i class="fas fa-bars"></i>
+        <div style={{"fontWeight":700, "fontSize": "30px", "marginRight": "5%", "marginLeft": "5%"}}>
+          <i className="fas fa-bars"></i>
         </div>
         <div>
           <img src={logo} alt="Logo"/>

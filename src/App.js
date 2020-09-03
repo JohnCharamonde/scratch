@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Components/navbar.jsx'
-import Scratchy from './Components/scratchy.jsx'
+import ScratchyDesign from './Components/scratchy-design.jsx'
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <Navbar />
       </div>
       <div>
-        <Scratchy />
+        <ScratchyDesign />
       </div>
     </div>
   );

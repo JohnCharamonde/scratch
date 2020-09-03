@@ -1,7 +1,7 @@
 import React from 'react';
 import skin from './skin.png';
 
-function Scratchy() {
+function ScratchyDesign() {
   return (
     <div style={{"display":"flex", "justifyContent":"Center"}}>
       <img src={skin} alt="Skin" style={{"height": "55%", "width":"55%", "marginTop": "2.5%"}}/>
@@ -10,4 +10,4 @@ function Scratchy() {
   )
 }
 
-export default Scratchy;
+export default ScratchyDesign;
