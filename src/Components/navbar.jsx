@@ -15,7 +15,7 @@ function NavBar() {
       </div>
 
       <div style={{"display":"flex", "fontFamily":"Helvetica", "fontSize":"100%", "width":"20%", "justifyContent": "Space-between", "marginRight":"2%"}}>
-          <div style={{"marginRight":"10%"}}>Send</div>
+          <div style={{"marginRight":"10%"}}>Create</div>
           <div style={{"marginRight":"10%"}}>Wallet</div>
           <div style={{"marginRight":"10%"}}>Account</div>
       </div>

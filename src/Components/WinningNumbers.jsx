@@ -1,14 +1,15 @@
 import React from 'react';
-import WinningNumbersRow from './WinningNumbersRow.jsx'
+import WinningNumber from './WinningNumber.jsx'
+import Background from './contours.png'
 
 function WinningNumbers() {
   return (
-    <div style={{"backgroundColor": "white", "zIndex": 5, "height": "9.1%", "width":"24.22%", "left":"37.7%", "top":"27.7%"}}>
-      <WinningNumbersRow />
-      <WinningNumbersRow />
-      <WinningNumbersRow />
-      <WinningNumbersRow />
-      <WinningNumbersROw />
+    <div style={{"display":"flex","position": "absolute", "backgroundColor": "beige", "backgroundImage": "url(" + Background + ")", "height": "10.1%", "width":"26.5%", "left":"37.8%", "top":"20.9%"}}>
+      <WinningNumber />
+      <WinningNumber />
+      <WinningNumber />
+      <WinningNumber />
+      <WinningNumber />
     </div>
   )
 }
