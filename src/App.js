@@ -1,15 +1,15 @@
 import React from 'react';
-import Navbar from './Components/navbar.jsx'
-import ScratchyDesign from './Components/scratchy-design.jsx'
+import NavBar from './Components/NavBar.jsx'
+import Scratchy from './Components/Scratchy.jsx'
 
 function App() {
   return (
     <div>
       <div>
-        <Navbar />
+        <NavBar />
       </div>
       <div>
-        <ScratchyDesign />
+        <Scratchy />
       </div>
     </div>
   );

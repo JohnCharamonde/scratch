@@ -226,7 +226,91 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Components_navbar_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Components/navbar.jsx */ \"./src/Components/navbar.jsx\");\n/* harmony import */ var _Components_scratchy_design_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Components/scratchy-design.jsx */ \"./src/Components/scratchy-design.jsx\");\n\n\n\n\nfunction App() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_navbar_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_scratchy_design_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n//# sourceURL=webpack:///./src/App.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Components_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Components/NavBar.jsx */ \"./src/Components/NavBar.jsx\");\n/* harmony import */ var _Components_Scratchy_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Components/Scratchy.jsx */ \"./src/Components/Scratchy.jsx\");\n\n\n\n\nfunction App() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_NavBar_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Components_Scratchy_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n//# sourceURL=webpack:///./src/App.js?");
+
+/***/ }),
+
+/***/ "./src/Components/NavBar.jsx":
+/*!***********************************!*\
+  !*** ./src/Components/NavBar.jsx ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _full_logo_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./full-logo.jpg */ \"./src/Components/full-logo.jpg\");\n\n\n\nfunction NavBar() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"alignItems\": \"center\",\n      \"height\": \"5%\",\n      \"justifyContent\": \"space-between\",\n      \"color\": \"white\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"alignItems\": \"center\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"fontWeight\": 700,\n      \"fontSize\": \"30px\",\n      \"marginRight\": \"5%\",\n      \"marginLeft\": \"5%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"i\", {\n    className: \"fas fa-bars\"\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: _full_logo_jpg__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    alt: \"Logo\",\n    style: {\n      \"height\": \"60%\",\n      \"width\": \"60%\"\n    }\n  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"fontFamily\": \"Helvetica\",\n      \"fontSize\": \"100%\",\n      \"width\": \"20%\",\n      \"justifyContent\": \"Space-between\",\n      \"marginRight\": \"2%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"marginRight\": \"10%\"\n    }\n  }, \"Send\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"marginRight\": \"10%\"\n    }\n  }, \"Wallet\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"marginRight\": \"10%\"\n    }\n  }, \"Account\")));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (NavBar);\n\n//# sourceURL=webpack:///./src/Components/NavBar.jsx?");
+
+/***/ }),
+
+/***/ "./src/Components/Scratchy.jsx":
+/*!*************************************!*\
+  !*** ./src/Components/Scratchy.jsx ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _skin_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./skin.png */ \"./src/Components/skin.png\");\n/* harmony import */ var _WinningNumber_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./WinningNumber.jsx */ \"./src/Components/WinningNumber.jsx\");\n/* harmony import */ var _YourNumbers_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./YourNumbers.jsx */ \"./src/Components/YourNumbers.jsx\");\n\n\n\n\n\nfunction Scratchy() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"justifyContent\": \"Center\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: _skin_png__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    alt: \"Skin\",\n    style: {\n      \"height\": \"60%\",\n      \"width\": \"60%\",\n      \"marginTop\": \"1%\"\n    }\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"position\": \"absolute\",\n      \"height\": \"9.1%\",\n      \"width\": \"24.22%\",\n      \"left\": \"37.7%\",\n      \"top\": \"22.6%\",\n      \"fontWeight\": \"1200\",\n      \"fontSize\": \"300%\",\n      \"fontFamily\": \"Helvetica\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WinningNumber_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WinningNumber_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WinningNumber_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WinningNumber_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_WinningNumber_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YourNumbers_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"backgroundColor\": \"rgb(25, 24, 27)\",\n      \"width\": \"27.4%\",\n      \"marginTop\": \"1%\"\n    }\n  }));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Scratchy);\n\n//# sourceURL=webpack:///./src/Components/Scratchy.jsx?");
+
+/***/ }),
+
+/***/ "./src/Components/WinningNumber.jsx":
+/*!******************************************!*\
+  !*** ./src/Components/WinningNumber.jsx ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction WinningNumber() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"border\": \"1px solid red\",\n      \"height\": \"100%\",\n      \"width\": \"20%\",\n      \"zIndex\": \"2\",\n      \"justifyContent\": \"center\",\n      \"alignItems\": \"center\"\n    }\n  }, \"7\");\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (WinningNumber);\n\n//# sourceURL=webpack:///./src/Components/WinningNumber.jsx?");
+
+/***/ }),
+
+/***/ "./src/Components/YourNumber.jsx":
+/*!***************************************!*\
+  !*** ./src/Components/YourNumber.jsx ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction YourNumber() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"height\": \"100%\",\n      \"width\": \"25%\",\n      \"zIndex\": \"2\",\n      \"fontFamily\": \"Helvetica\",\n      \"fontWeight\": \"bolder\",\n      \"alignItems\": \"center\",\n      \"justifyContent\": \"center\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"height\": \"90%\",\n      \"width\": \"90%\",\n      \"border\": \".1px solid lightgray\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"alignItems\": \"flex-start\",\n      \"justifyContent\": \"center\",\n      \"height\": \"40%\",\n      \"width\": \"100%\",\n      \"fontSize\": \"160%\"\n    }\n  }, \"7\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"alignItems\": \"flex-start\",\n      \"justifyContent\": \"center\",\n      \"height\": \"10%\",\n      \"width\": \"100%\",\n      \"fontSize\": \"10%\"\n    }\n  }, \"SVN\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"alignItems\": \"flex-end\",\n      \"justifyContent\": \"center\",\n      \"height\": \"40%\",\n      \"width\": \"100%\",\n      \"fontSize\": \"100%\"\n    }\n  }, \"0.25 ETH\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"alignItems\": \"flex-end\",\n      \"justifyContent\": \"center\",\n      \"height\": \"10%\",\n      \"width\": \"100%\",\n      \"fontSize\": \"30%\"\n    }\n  }, \"$100.00\")));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (YourNumber);\n\n//# sourceURL=webpack:///./src/Components/YourNumber.jsx?");
+
+/***/ }),
+
+/***/ "./src/Components/YourNumbers.jsx":
+/*!****************************************!*\
+  !*** ./src/Components/YourNumbers.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _YourNumbersRow_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./YourNumbersRow.jsx */ \"./src/Components/YourNumbersRow.jsx\");\n/* harmony import */ var _contours_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contours.png */ \"./src/Components/contours.png\");\n\n\n\n\nfunction YourNumbers() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"backgroundColor\": \"white\",\n      \"backgroundImage\": \"url(\" + _contours_png__WEBPACK_IMPORTED_MODULE_2__[\"default\"] + \")\",\n      \"position\": \"absolute\",\n      \"height\": \"47.7%\",\n      \"width\": \"26.5%\",\n      \"left\": \"37.6%\",\n      \"top\": \"36.5%\",\n      \"fontFamily\": \"Helvetica\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YourNumbersRow_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YourNumbersRow_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YourNumbersRow_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YourNumbersRow_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YourNumbersRow_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (YourNumbers);\n\n//# sourceURL=webpack:///./src/Components/YourNumbers.jsx?");
+
+/***/ }),
+
+/***/ "./src/Components/YourNumbersRow.jsx":
+/*!*******************************************!*\
+  !*** ./src/Components/YourNumbersRow.jsx ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _YourNumber_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./YourNumber.jsx */ \"./src/Components/YourNumber.jsx\");\n\n\n\nfunction YourNumbersRow() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"backgroundColor\": \"transparent\",\n      \"height\": \"20%\",\n      \"width\": \"100%\",\n      \"fontFamily\": \"Helvetica\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YourNumber_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YourNumber_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YourNumber_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_YourNumber_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (YourNumbersRow);\n\n//# sourceURL=webpack:///./src/Components/YourNumbersRow.jsx?");
+
+/***/ }),
+
+/***/ "./src/Components/contours.png":
+/*!*************************************!*\
+  !*** ./src/Components/contours.png ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"7f5300f48e5dd7ada2a764f1b0aad99d.png\");\n\n//# sourceURL=webpack:///./src/Components/contours.png?");
 
 /***/ }),
 
@@ -239,54 +323,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"720b5b72e4ebcde4053987b053e53527.jpg\");\n\n//# sourceURL=webpack:///./src/Components/full-logo.jpg?");
-
-/***/ }),
-
-/***/ "./src/Components/navbar.jsx":
-/*!***********************************!*\
-  !*** ./src/Components/navbar.jsx ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _full_logo_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./full-logo.jpg */ \"./src/Components/full-logo.jpg\");\n\n\n\nfunction Navbar() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"alignItems\": \"center\",\n      \"height\": \"5%\",\n      \"justifyContent\": \"space-between\",\n      \"color\": \"white\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"alignItems\": \"center\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"fontWeight\": 700,\n      \"fontSize\": \"30px\",\n      \"marginRight\": \"5%\",\n      \"marginLeft\": \"5%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"i\", {\n    className: \"fas fa-bars\"\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: _full_logo_jpg__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    alt: \"Logo\"\n  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"fontFamily\": \"Helvetica\",\n      \"fontSize\": \"20px\",\n      \"width\": \"30%\",\n      \"justifyContent\": \"Space-between\",\n      \"marginRight\": \"2%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"marginRight\": \"10%\"\n    }\n  }, \"Send\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"marginRight\": \"10%\"\n    }\n  }, \"Wallet\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"marginRight\": \"10%\"\n    }\n  }, \"Account\")));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Navbar);\n\n//# sourceURL=webpack:///./src/Components/navbar.jsx?");
-
-/***/ }),
-
-/***/ "./src/Components/scratchy-design.jsx":
-/*!********************************************!*\
-  !*** ./src/Components/scratchy-design.jsx ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _skin_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./skin.png */ \"./src/Components/skin.png\");\n/* harmony import */ var _scratchy_winning_number_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scratchy-winning-number.jsx */ \"./src/Components/scratchy-winning-number.jsx\");\n/* harmony import */ var _scratchy_your_number_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scratchy-your-number.jsx */ \"./src/Components/scratchy-your-number.jsx\");\n\n\n\n\n\nfunction ScratchyDesign() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"justifyContent\": \"Center\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: _skin_png__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n    alt: \"Skin\",\n    style: {\n      \"height\": \"55%\",\n      \"width\": \"55%\",\n      \"marginTop\": \"2.5%\"\n    }\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"position\": \"absolute\",\n      \"height\": \"9.1%\",\n      \"width\": \"24.22%\",\n      \"left\": \"37.7%\",\n      \"top\": \"27.7%\",\n      \"fontWeight\": \"1200\",\n      \"fontSize\": \"300%\",\n      \"fontFamily\": \"Helvetica\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_scratchy_winning_number_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_scratchy_winning_number_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_scratchy_winning_number_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_scratchy_winning_number_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_scratchy_winning_number_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"backgroundColor\": \"transparent\",\n      \"position\": \"absolute\",\n      \"height\": \"9.1%\",\n      \"width\": \"24.22%\",\n      \"left\": \"37.5%\",\n      \"top\": \"42%\",\n      \"fontWeight\": \"1200\",\n      \"fontSize\": \"300%\",\n      \"fontFamily\": \"Helvetica\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_scratchy_your_number_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_scratchy_your_number_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_scratchy_your_number_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_scratchy_your_number_jsx__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"outline\": \"1px solid white\",\n      \"width\": \"27.5%\",\n      \"marginTop\": \"2.5%\"\n    }\n  }));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ScratchyDesign);\n\n//# sourceURL=webpack:///./src/Components/scratchy-design.jsx?");
-
-/***/ }),
-
-/***/ "./src/Components/scratchy-winning-number.jsx":
-/*!****************************************************!*\
-  !*** ./src/Components/scratchy-winning-number.jsx ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction WinningNumber() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"border\": \"1px solid red\",\n      \"height\": \"100%\",\n      \"width\": \"20%\",\n      \"zIndex\": \"2\",\n      \"justifyContent\": \"center\",\n      \"alignItems\": \"center\"\n    }\n  }, \"7\");\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (WinningNumber);\n\n//# sourceURL=webpack:///./src/Components/scratchy-winning-number.jsx?");
-
-/***/ }),
-
-/***/ "./src/Components/scratchy-your-number.jsx":
-/*!*************************************************!*\
-  !*** ./src/Components/scratchy-your-number.jsx ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction YourNumber() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"border\": \"1px solid red\",\n      \"height\": \"100%\",\n      \"width\": \"25%\",\n      \"zIndex\": \"2\",\n      \"justifyContent\": \"center\",\n      \"alignItems\": \"center\"\n    }\n  }, \"7\");\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (YourNumber);\n\n//# sourceURL=webpack:///./src/Components/scratchy-your-number.jsx?");
 
 /***/ }),
 
