@@ -6,7 +6,7 @@ import YourNumbers from './YourNumbers.jsx';
 function Scratchy() {
   return (
     <div style={{"display":"flex", "justifyContent":"Center"}}>
-      <img src={skin} alt="Skin" style={{"height": "60%", "width":"60%", "marginTop": "1%"}}/>
+      <img src={skin} alt="Skin" style={{"height": "60%", "width":"60%", "marginTop": "1%", "zIndex":"100"}}/>
         <WinningNumbers />
         <YourNumbers />
       <div style={{"display":"flex", "backgroundColor": "rgb(25, 24, 27)", "width":"27.4%", "marginTop":"1%"}}></div>
