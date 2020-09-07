@@ -8,7 +8,7 @@ class Scratchy extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      winningNumbers: [{number: 40, text: 'FRTY', shape:'c'}, {number: 30, text: 'TRTY', shape:'c'},{number: 20, text: 'TNTY', shape:'c'},{number: 9, text: 'NINE', shape:'c'},{number: 7, text: 'SEVN', shape:'c'}]
+      winningNumbers: [{number: 40, text: 'FRTY', shape:'c', clickCount: 0}, {number: 30, text: 'TRTY', shape:'c', clickCount: 1},{number: 20, text: 'TNTY', shape:'c', clickCount: 2},{number: 9, text: 'NINE', shape:'c', clickCount: 1},{number: 7, text: 'SEVN', shape:'c', clickCount: 0}]
     }
 
   }

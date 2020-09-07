@@ -8,18 +8,26 @@ function WinningNumber(props) {
     d: "polygon(25% 13%, 30% 12%, 31% 15%, 29% 18%, 29% 18%, 38% 17%, 44% 6%, 38% 24%, 36% 33%, 57% 23%, 64% 12%, 78% 9%, 78% 26%, 72% 36%, 59% 58%, 40% 73%, 59% 63%, 65% 75%, 63% 82%, 59% 84%, 53% 87%, 42% 88%, 25% 86%, 22% 100%, 15% 90%, 15% 68%, 12% 77%, 16% 49%, 10% 59%, 10% 68%, 13% 26%, 10% 41%, 6% 52%, 44% 24%, 20% 17%, 23% 33%, 16% 41%, 34% 30%",
     e: "polygon(24% 24%, 39% 8%, 17% 40%, 28% 30%, 14% 52%, 2% 75%, 14% 61%, 4% 94%, 7% 97%, 13% 98%, 19% 82%, 16% 95%, 59% 99%, 74% 79%, 64% 93%, 88% 66%, 83% 44%, 100% 7%, 97% 1%, 68% 9%, 45% 5%)"
   }
-  // if(props.number !== 7 || props.number !== 9) {
-  //   return (
-  //     <div style={{"display":"flex", "backgroundColor": "pink", "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"99","fontFamily":"Apercu,Lucida Grande,sans-serif", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center"}}>
-  //   <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid lightgray"}}>
-  //     <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"30%", "width":"100%", "fontSize":"160%"}}>{props.number}</div>
-  //     <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"20%", "width":"100%", "fontSize":"10%"}}>{props.text}</div>
-  //   </div>
-  // </div>
-  // )
-  // }
-  return (
+
+  if(props.clickCount === 0) {
+    return (
+      <div style={{"display":"flex","height": "100%", "width": "25%", "zIndex":"99"}}></div>
+  )
+  }
+
+  if(props.clickCount === 1) {
+    return (
       <div style={{"display":"flex", "backgroundColor": "aqua", "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"101","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "white":"black", "clipPath":shapes[props.shape]}}>
+      <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid pink"}}>
+      <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"30%", "width":"100%", "fontSize":"160%"}}>{props.number}</div>
+      <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"20%", "width":"100%", "fontSize":"10%"}}>{props.text}</div>
+    </div>
+  </div>
+  )
+  }
+
+  return (
+      <div style={{"display":"flex", "backgroundColor": "aqua", "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"101","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "white":"black"}}>
       <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid pink"}}>
       <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"30%", "width":"100%", "fontSize":"160%"}}>{props.number}</div>
       <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"20%", "width":"100%", "fontSize":"10%"}}>{props.text}</div>
