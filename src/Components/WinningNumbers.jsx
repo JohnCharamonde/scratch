@@ -15,12 +15,14 @@ function WinningNumbers(props) {
       "top": "20.9%"
     }}>
 
-      {props.winningNumbers.map(winningNumber => 
+      {props.winningNumbers.map((winningNumber, i) => 
         <WinningNumber 
           number={winningNumber.number}
           text={winningNumber.text}
           shape={winningNumber.shape}
           clickCount={winningNumber.clickCount}
+          handleWinningNumberClick={props.handleWinningNumberClick}
+          i={i}
         />   
       )}
     </div>

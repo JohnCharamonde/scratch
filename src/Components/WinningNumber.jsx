@@ -1,5 +1,7 @@
 import React from 'react';
 import Background from './contours.png'
+
+
 function WinningNumber(props) {
   const shapes = {
     a: "polygon(24% 16%, 16% 25%, 19% 22%, 18% 31%, 20% 29%, 18% 37%, 20% 33%, 18% 43%, 21% 42%, 20% 50%, 21% 50%, 19% 60%, 20% 60%, 20% 67%, 23% 66%, 21% 74%, 23% 72%, 24% 77%, 31% 78%, 34% 77%, 36% 79%, 38% 80%, 50% 77%, 53% 78%, 56% 79%, 59% 79%, 62% 81%, 68% 78%, 80% 76%, 86% 53%, 83% 49%, 84% 44%, 80% 44%, 82% 37%, 84% 32%, 83% 28%, 80% 23%, 80% 24%, 78% 18%, 70% 19%, 70% 17%, 64% 18%, 61% 16%, 54% 19%, 55% 17%, 48% 19%, 49% 17%, 39% 20%, 35% 18%, 32% 18%)",
@@ -11,13 +13,22 @@ function WinningNumber(props) {
 
   if(props.clickCount === 0) {
     return (
-      <div style={{"display":"flex","height": "100%", "width": "25%", "zIndex":"99"}}></div>
+      <div style={{"display":"flex", "backgroundColor": "transparent","height": "100%", "width": "25%", "zIndex":"101","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "color":"transparent"}}
+      onClick={(e) => {props.handleWinningNumberClick(e, props.i)}}
+      >
+      <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid transparent"}}>
+      <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"30%", "width":"100%", "fontSize":"160%"}}>{props.number}</div>
+      <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"20%", "width":"100%", "fontSize":"10%"}}>{props.text}</div>
+    </div>
+  </div>
   )
   }
 
   if(props.clickCount === 1) {
     return (
-      <div style={{"display":"flex", "backgroundColor": "aqua", "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"101","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "white":"black", "clipPath":shapes[props.shape]}}>
+      <div style={{"display":"flex", "backgroundColor": "aqua", "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"101","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "white":"black", "clipPath":shapes[props.shape]}}
+      onClick={(e) => {props.handleWinningNumberClick(e, props.i)}}
+      >
       <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid pink"}}>
       <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"30%", "width":"100%", "fontSize":"160%"}}>{props.number}</div>
       <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"20%", "width":"100%", "fontSize":"10%"}}>{props.text}</div>
