@@ -4,7 +4,8 @@ import WinningNumbers from './WinningNumbers.jsx';
 import YourNumbers from './YourNumbers.jsx';
 import PersonalMessage from './PersonalMessage.jsx'
 import UIfx from 'uifx';
-import bwongSound from '../soundEffects/inceptionbutton.mp3';
+import bwongSound from '../soundEffects/bwongSound.mp3';
+import scratchSound from '../soundEffects/scratchSound.mp3';
 
 class Scratchy extends React.Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class Scratchy extends React.Component {
   }
 
   handleWinningNumberClick(e, i) {
-    if(this.state.winningNumbers[i].clickCount < 3) {
+    if(this.state.winningNumbers[i].clickCount < 2) {
       let newWinningNumbers = this.state.winningNumbers;
       newWinningNumbers[i].clickCount++;
       this.setState({
@@ -29,9 +30,13 @@ class Scratchy extends React.Component {
       })
     }
 
-    const bwong = new UIfx(bwongSound);
     
-    if(this.state.winningNumbers[i].clickCount === 3) {
+    const secondScratch = new Audio(scratchSound);
+    const bwong = new Audio(bwongSound);
+    
+    if(this.state.winningNumbers[i].clickCount === 1) {
+      secondScratch.play()
+    } else {
       bwong.play();
     }
   }
