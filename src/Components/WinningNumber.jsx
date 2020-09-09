@@ -13,7 +13,16 @@ function WinningNumber(props) {
 
   if(props.clickCount === 0) {
     return (
-      <div style={{"display":"flex", "backgroundColor": "transparent","height": "100%", "width": "25%", "zIndex":"101","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "color":"transparent"}}
+      <div style={{"display":"flex",
+      "backgroundColor": "transparent",
+      "height": "100%",
+      "width": "25%",
+      "zIndex":"101",
+      "fontFamily":"Helvetica",
+      "fontWeight":"bolder",
+      "alignItems": "center",
+      "justifyContent": "center",
+      "color":"transparent"}}
       onClick={(e) => {props.handleWinningNumberClick(e, props.i)}}
       >
       <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid transparent"}}>
@@ -49,4 +58,4 @@ function WinningNumber(props) {
   )
 }
 
-export default WinningNumber
+export default WinningNumber;
