@@ -32,8 +32,8 @@ class Scratchy extends React.Component {
           {number: 27, text: 'TNSV', shape:'c', clickCount: 0}
         ],
         [
-          {number: 34, text: 'TRFR', shape:'e', clickCount: 0},
-          {number: 1, text: 'ONE', shape:'d', clickCount: 0},
+          {number: 34, text: 'TRFR', shape:'e', clickCount: 1},
+          {number: 1, text: 'ONE', shape:'d', clickCount: 2},
           {number: 48, text: 'FRET', shape:'c', clickCount: 0},
           {number: 45, text: 'FRFV', shape:'d', clickCount: 0}
         ],
