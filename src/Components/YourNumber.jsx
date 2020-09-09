@@ -4,11 +4,20 @@ import YourNumberNumber from './YourNumberNumber.jsx'
 import YourNumberPrize from './YourNumberPrize.jsx'
 
 function YourNumber(props) { 
+  let backgroundColor = "transparent";
+  let backgroundImage = "";
+  let border = "";
+
+  if(props.yourNumber.numberClickCount > 1 && props.yourNumber.prizeClickCount > 1) {
+    backgroundColor = "aqua";
+    backgroundImage = "url(" + Background + ")";
+    border = ".1px solid pink";
+  }
   return (
     <div style={{
       "display":"flex",
-      "backgroundColor":"transparent",
-      "backgroundImage": "url(" + Background + ")",
+      "backgroundColor": backgroundColor,
+      "backgroundImage": backgroundImage,
       "color":"black",
       "height": "100%",
       "width": "25%",
@@ -16,17 +25,24 @@ function YourNumber(props) {
       "fontWeight":"bolder",
       "alignItems": "center",
       "justifyContent": "center",
-      "zIndex":"101",
-      "clipPath":"inset(50% 0 0 0)"
+      "zIndex":"110",
     }}>
-      <div style={{"display":"flex", "flexDirection":"column","height":"90%", "width":"90%", "border":".1px solid pink"}}>
+      <div style={{"display":"flex", "flexDirection":"column","height":"90%", "width":"90%", "zIndex":"105", "border": border}}>
         <div>
           <YourNumberNumber 
             number={props.yourNumber.number}
             text={props.yourNumber.text}
+            clickCount={props.yourNumber.numberClickCount}
+            prizeClickCount={props.yourNumber.prizeClickCount}
           />
         </div>
-        <YourNumberPrize />
+        <YourNumberPrize 
+          clickCount={props.yourNumber.prizeClickCount}
+          numberClickCount={props.yourNumber.numberClickCount}
+          handleYourNumberPrizeClick={props.handleYourNumberPrizeClick}
+          i={props.i}
+          j={props.j}
+        />
       </div>
     </div>
   )

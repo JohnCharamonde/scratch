@@ -4,8 +4,9 @@ import WinningNumbers from './WinningNumbers.jsx';
 import YourNumbers from './YourNumbers.jsx';
 import PersonalMessage from './PersonalMessage.jsx'
 import UIfx from 'uifx';
-import bwongSound from '../soundEffects/bwongSound.mp3';
-import scratchSound from '../soundEffects/scratchSound.mp3';
+import bwongSound from '../Sounds/bwongSound.mp3';
+import scratchSound from '../Sounds/scratchSound.mp3';
+import suspenseSound from '../Sounds/suspense.mp3';
 
 class Scratchy extends React.Component {
   constructor(props) {
@@ -20,34 +21,34 @@ class Scratchy extends React.Component {
       ],
       yourNumbers: [
         [
-          {number: 41, text: 'FRON', shape:'c', clickCount: 0},
-          {number: 33, text: 'TRTR', shape:'d', clickCount: 0},
-          {number: 28, text: 'TNET', shape:'e', clickCount: 0},
-          {number: 19, text: 'NNTN', shape:'c', clickCount: 0}
+          {number: 41, text: 'FRON', shape:'c', numberClickCount: 0, prizeClickCount: 0},
+          {number: 33, text: 'TRTR', shape:'d', numberClickCount: 0, prizeClickCount: 1},
+          {number: 28, text: 'TNET', shape:'e', numberClickCount: 0, prizeClickCount: 2},
+          {number: 19, text: 'NNTN', shape:'c', numberClickCount: 0, prizeClickCount: 3}
         ],
         [
-          {number: 23, text: 'TNTR', shape:'e', clickCount: 0},
-          {number: 12, text: 'TWLV', shape:'d', clickCount: 0},
-          {number: 8, text: 'EIGH', shape:'e', clickCount: 0},
-          {number: 27, text: 'TNSV', shape:'c', clickCount: 0}
+          {number: 23, text: 'TNTR', shape:'e', numberClickCount: 1, prizeClickCount: 0},
+          {number: 12, text: 'TWLV', shape:'d', numberClickCount: 1, prizeClickCount: 1},
+          {number: 8, text: 'EIGH', shape:'e', numberClickCount: 1, prizeClickCount: 2},
+          {number: 27, text: 'TNSV', shape:'c', numberClickCount: 1, prizeClickCount: 3}
         ],
         [
-          {number: 34, text: 'TRFR', shape:'e', clickCount: 1},
-          {number: 1, text: 'ONE', shape:'d', clickCount: 2},
-          {number: 48, text: 'FRET', shape:'c', clickCount: 0},
-          {number: 45, text: 'FRFV', shape:'d', clickCount: 0}
+          {number: 34, text: 'TRFR', shape:'e', numberClickCount: 2, prizeClickCount: 0},
+          {number: 1, text: 'ONE', shape:'d', numberClickCount: 2, prizeClickCount: 1},
+          {number: 48, text: 'FRET', shape:'c', numberClickCount: 2, prizeClickCount: 2},
+          {number: 45, text: 'FRFV', shape:'d', numberClickCount: 2, prizeClickCount: 3}
         ],
         [
-          {number: 16, text: 'SXTN', shape:'e', clickCount: 0},
-          {number: 25, text: 'TNFV', shape:'d', clickCount: 0},
-          {number: 26, text: 'TNSX', shape:'c', clickCount: 0},
-          {number: 36, text: 'TRSX', shape:'e', clickCount: 0}
+          {number: 16, text: 'SXTN', shape:'e', numberClickCount: 0, prizeClickCount: 0},
+          {number: 25, text: 'TNFV', shape:'d', numberClickCount: 0, prizeClickCount: 0},
+          {number: 26, text: 'TNSX', shape:'c', numberClickCount: 0, prizeClickCount: 0},
+          {number: 36, text: 'TRSX', shape:'e', numberClickCount: 0, prizeClickCount: 0}
         ],
         [
-          {number: 20, text: 'TNTY', shape:'d', clickCount: 0},
-          {number: 49, text: 'FRNN', shape:'c', clickCount: 0},
-          {number: 11, text: 'ELVN', shape:'e', clickCount: 0},
-          {number: 10, text: 'TEN', shape:'c', clickCount: 0}
+          {number: 20, text: 'TNTY', shape:'d', numberClickCount: 0, prizeClickCount: 0},
+          {number: 49, text: 'FRNN', shape:'c', numberClickCount: 0, prizeClickCount: 0},
+          {number: 11, text: 'ELVN', shape:'e', numberClickCount: 0, prizeClickCount: 0},
+          {number: 10, text: 'TEN', shape:'c', numberClickCount: 0, prizeClickCount: 0}
         ],
       ]
     }
@@ -62,7 +63,6 @@ class Scratchy extends React.Component {
       })
     }
 
-    
     const secondScratch = new Audio(scratchSound);
     const bwong = new Audio(bwongSound);
     
@@ -70,6 +70,26 @@ class Scratchy extends React.Component {
       secondScratch.play()
     } else {
       bwong.play();
+    }
+  }
+
+
+  handleYourNumberPrizeClick(e, i, j) {
+    if(this.state.yourNumbers[i][j].prizeClickCount < 2) {
+      let newYourNumbers = this.state.yourNumbers;
+      newYourNumbers[i][j].prizeClickCount++;
+      this.setState({
+        yourNumbers: newYourNumbers
+      })
+    }
+
+    const scratch = new Audio(scratchSound);
+    const suspense = new Audio(suspenseSound);
+    
+    if(this.state.yourNumbers[i][j].prizeClickCount === 1) {
+      scratch.play()
+    } else {
+      suspense.play();
     }
   }
 
@@ -83,6 +103,7 @@ class Scratchy extends React.Component {
         />
         <YourNumbers 
           yourNumbers={this.state.yourNumbers}
+          handleYourNumberPrizeClick={this.handleYourNumberPrizeClick.bind(this)}
         />
         <PersonalMessage />
         <div style={{

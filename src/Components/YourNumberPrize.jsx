@@ -3,20 +3,41 @@ import coin from './coin-flip-49.gif';
 import Background from './contours.png'
 
 function YourNumberPrize(props) {
+    let backgroundColor = 'transparent';
+    let backgroundImage = "";
+    let clipPath = "";
+    let opacity = "0"
+  
+    if(props.clickCount === 1) {
+      backgroundColor = 'aqua'
+      backgroundImage = "url(" + Background + ")"
+      clipPath = "polygon(11% 81%, 17% 83%, 14% 89%, 19% 90%, 22% 86%, 25% 87%, 24% 94%, 29% 94%, 29% 94%, 41% 91%, 50% 93%, 56% 87%, 77% 65%, 53% 93%, 66% 96%, 69% 86%, 74% 86%, 81% 72%, 91% 49%, 98% 24%, 89% 45%, 98% 17%, 85% 38%, 98% 7%, 87% 9%, 86% 3%, 78% 9%, 69% 6%, 58% 12%, 53% 26%, 54% 10%, 42% 13%, 29% 32%, 21% 62%, 26% 38%, 16% 73%, 18% 52%)"
+      opacity = "1"
+    } else if(props.clickCount > 1 && props.numberClickCount < 2) {
+      backgroundColor = 'aqua'
+      backgroundImage = "url(" + Background + ")"
+      clipPath = ''
+      opacity = "1"
+    } else if (props.clickCount > 1 && props.numberClickCount >= 2){
+      opacity = "1"
+    }
+
+
   return (
-    <div style={{"position":"relative",
-    "top":"-25%",
+    <div style={{
     "display":"flex",
     "justifyContent":"center",
     "alignItems":"center",
-    "height":"150%",
+    "height":"50%",
     "width":"100%",
-    "zIndex":"105",
-    "backgroundColor":"aqua",
-    "backgroundImage": "url(" + Background + ")",
-    "clipPath":"polygon(19% 73%, 10% 95%, 23% 80%, 30% 84%, 33% 81%, 52% 52%, 36% 83%, 41% 82%, 41% 82%, 46% 83%, 50% 84%, 53% 86%, 51% 89%, 59% 88%, 70% 83%, 75% 81%, 80% 59%, 77% 73%, 88% 50%, 95% 33%, 71% 77%, 93% 25%, 96% 27%, 90% 20%, 84% 20%, 76% 24%, 75% 17%, 71% 17%, 64% 22%, 57% 21%, 43% 41%, 56% 17%, 48% 23%, 35% 18%, 32% 35%, 24% 41%, 11% 71%, 28% 45%, 44% 8%)"
-    }}>
-      <img src={coin} alt="Coin" style={{"height":"120%", "width":"70%"}} />
+    "zIndex":"99",
+    "backgroundColor": backgroundColor,
+    "backgroundImage": backgroundImage,
+    "clipPath": clipPath
+    }}
+    onClick={(e) => {props.handleYourNumberPrizeClick(e, props.i, props.j)}}
+    >
+      <img src={coin} alt="Coin" style={{"height":"160%", "width":"60%", "opacity":opacity}} />
     </div>
   )
 }
