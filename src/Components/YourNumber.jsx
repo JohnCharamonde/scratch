@@ -34,6 +34,9 @@ function YourNumber(props) {
             text={props.yourNumber.text}
             clickCount={props.yourNumber.numberClickCount}
             prizeClickCount={props.yourNumber.prizeClickCount}
+            handleYourNumberNumberClick={props.handleYourNumberNumberClick}
+            i={props.i}
+            j={props.j}
           />
         </div>
         <YourNumberPrize 

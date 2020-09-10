@@ -17,6 +17,7 @@ function YourNumbers(props) {
           yourNumbersRow={yourNumbersRow}
           i={i}
           handleYourNumberPrizeClick={props.handleYourNumberPrizeClick}
+          handleYourNumberNumberClick={props.handleYourNumberNumberClick}
         />   
       )}
     </div>

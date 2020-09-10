@@ -22,21 +22,21 @@ class Scratchy extends React.Component {
       yourNumbers: [
         [
           {number: 41, text: 'FRON', shape:'c', numberClickCount: 0, prizeClickCount: 0},
-          {number: 33, text: 'TRTR', shape:'d', numberClickCount: 0, prizeClickCount: 1},
-          {number: 28, text: 'TNET', shape:'e', numberClickCount: 0, prizeClickCount: 2},
-          {number: 19, text: 'NNTN', shape:'c', numberClickCount: 0, prizeClickCount: 3}
+          {number: 33, text: 'TRTR', shape:'d', numberClickCount: 0, prizeClickCount: 0},
+          {number: 28, text: 'TNET', shape:'e', numberClickCount: 0, prizeClickCount: 0},
+          {number: 19, text: 'NNTN', shape:'c', numberClickCount: 0, prizeClickCount: 0}
         ],
         [
-          {number: 23, text: 'TNTR', shape:'e', numberClickCount: 1, prizeClickCount: 0},
-          {number: 12, text: 'TWLV', shape:'d', numberClickCount: 1, prizeClickCount: 1},
-          {number: 8, text: 'EIGH', shape:'e', numberClickCount: 1, prizeClickCount: 2},
-          {number: 27, text: 'TNSV', shape:'c', numberClickCount: 1, prizeClickCount: 3}
+          {number: 23, text: 'TNTR', shape:'e', numberClickCount: 0, prizeClickCount: 0},
+          {number: 12, text: 'TWLV', shape:'d', numberClickCount: 0, prizeClickCount: 0},
+          {number: 8, text: 'EIGH', shape:'e', numberClickCount: 0, prizeClickCount: 0},
+          {number: 27, text: 'TNSV', shape:'c', numberClickCount: 0, prizeClickCount: 0}
         ],
         [
-          {number: 34, text: 'TRFR', shape:'e', numberClickCount: 2, prizeClickCount: 0},
-          {number: 1, text: 'ONE', shape:'d', numberClickCount: 2, prizeClickCount: 1},
-          {number: 48, text: 'FRET', shape:'c', numberClickCount: 2, prizeClickCount: 2},
-          {number: 45, text: 'FRFV', shape:'d', numberClickCount: 2, prizeClickCount: 3}
+          {number: 34, text: 'TRFR', shape:'e', numberClickCount: 0, prizeClickCount: 0},
+          {number: 1, text: 'ONE', shape:'d', numberClickCount: 0, prizeClickCount: 0},
+          {number: 48, text: 'FRET', shape:'c', numberClickCount: 0, prizeClickCount: 0},
+          {number: 45, text: 'FRFV', shape:'d', numberClickCount: 0, prizeClickCount: 0}
         ],
         [
           {number: 16, text: 'SXTN', shape:'e', numberClickCount: 0, prizeClickCount: 0},
@@ -63,11 +63,30 @@ class Scratchy extends React.Component {
       })
     }
 
-    const secondScratch = new Audio(scratchSound);
+    const scratch = new Audio(scratchSound);
     const bwong = new Audio(bwongSound);
     
     if(this.state.winningNumbers[i].clickCount === 1) {
-      secondScratch.play()
+      scratch.play()
+    } else {
+      bwong.play();
+    }
+  }
+
+  handleYourNumberNumberClick(e, i, j) {
+    if(this.state.yourNumbers[i][j].numberClickCount < 2) {
+      let newYourNumbers = this.state.yourNumbers;
+      newYourNumbers[i][j].numberClickCount++;
+      this.setState({
+        yourNumbers: newYourNumbers
+      })
+    }
+
+    const scratch = new Audio(scratchSound);
+    const bwong = new Audio(bwongSound);
+    
+    if(this.state.yourNumbers[i][j].numberClickCount === 1) {
+      scratch.play()
     } else {
       bwong.play();
     }
@@ -104,6 +123,7 @@ class Scratchy extends React.Component {
         <YourNumbers 
           yourNumbers={this.state.yourNumbers}
           handleYourNumberPrizeClick={this.handleYourNumberPrizeClick.bind(this)}
+          handleYourNumberNumberClick={this.handleYourNumberNumberClick.bind(this)}
         />
         <PersonalMessage />
         <div style={{

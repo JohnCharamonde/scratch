@@ -39,7 +39,9 @@ function YourNumberNumber(props) {
       "height":"100%",
       "width":"100%",
       "fontWeight":"bolder"
-    }}>
+    }}
+    onClick={(e) => {props.handleYourNumberNumberClick(e, props.i, props.j)}}
+    >
       <div style={{"display":"flex", "alignItems": "flex-start", "justifyContent":"center", "fontSize":"160%", "color":color}}>{number}</div>
       <div style={{"display":"flex", "alignItems": "flex-start", "justifyContent":"center", "fontSize":"10%", "color":color}}>{text}</div>
     </div> 
