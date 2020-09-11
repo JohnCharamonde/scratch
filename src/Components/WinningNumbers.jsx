@@ -6,10 +6,10 @@ function WinningNumbers(props) {
     <div style={{
       "display": "flex",
       "position": "absolute",
-      "height": "10.1%",
-      "width": "26.5%",
-      "left": "37.8%",
-      "top": "20.9%"
+      "height": "11.6%",
+      "width": "26.75%",
+      "left": "37.7%",
+      "top": "15.5%",
     }}>
 
       {props.winningNumbers.map((winningNumber, i) => 

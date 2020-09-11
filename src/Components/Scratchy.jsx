@@ -114,7 +114,7 @@ class Scratchy extends React.Component {
 
   render() {
     return (
-      <div style={{"display":"flex", "justifyContent":"Center"}}>
+      <div style={{"position":"absolute","display":"flex", "justifyContent":"Center"}}>
         <img src={skin} alt="Skin" style={{"height": "60%", "width":"60%", "marginTop": "1%", "zIndex":"100"}}/>
         <WinningNumbers 
           winningNumbers={this.state.winningNumbers}
