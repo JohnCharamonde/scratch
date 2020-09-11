@@ -2,6 +2,8 @@ import React from 'react';
 import skin from '../../Images/skin.png';
 import WinningNumbers from './WinningNumbers/WinningNumbers.jsx';
 import YourNumbers from './YourNumbers/YourNumbers.jsx';
+import YourNumbersButtons from './YourNumbersButtons/YourNumbersButtons.jsx'
+import YourNumbersButtonsClicked from './YourNumbersButtonsClicked/YourNumbersButtonsClicked.jsx'
 import PersonalMessage from './PersonalMessage/PersonalMessage.jsx'
 import UIfx from 'uifx';
 import bwongSound from '../../Sounds/bwongSound.mp3';
@@ -73,7 +75,7 @@ class Scratchy extends React.Component {
     }
   }
 
-  handleYourNumberNumberClick(e, i, j) {
+  handleYourNumberNumberButtonClick(e, i, j) {
     if(this.state.yourNumbers[i][j].numberClickCount < 2) {
       let newYourNumbers = this.state.yourNumbers;
       newYourNumbers[i][j].numberClickCount++;
@@ -93,7 +95,7 @@ class Scratchy extends React.Component {
   }
 
 
-  handleYourNumberPrizeClick(e, i, j) {
+  handleYourNumberPrizeButtonClick(e, i, j) {
     if(this.state.yourNumbers[i][j].prizeClickCount < 2) {
       let newYourNumbers = this.state.yourNumbers;
       newYourNumbers[i][j].prizeClickCount++;
@@ -122,8 +124,14 @@ class Scratchy extends React.Component {
         />
         <YourNumbers 
           yourNumbers={this.state.yourNumbers}
-          handleYourNumberPrizeClick={this.handleYourNumberPrizeClick.bind(this)}
-          handleYourNumberNumberClick={this.handleYourNumberNumberClick.bind(this)}
+        />
+        <YourNumbersButtons 
+          yourNumbers={this.state.yourNumbers}
+          handleYourNumberPrizeButtonClick={this.handleYourNumberPrizeButtonClick.bind(this)}
+          handleYourNumberNumberButtonClick={this.handleYourNumberNumberButtonClick.bind(this)}
+        />
+        <YourNumbersButtonsClicked 
+          yourNumbers={this.state.yourNumbers}
         />
         <PersonalMessage />
         <div style={{

@@ -30,7 +30,6 @@ function YourNumberPrize(props) {
     "alignItems":"center",
     "height":"50%",
     "width":"100%",
-    "zIndex":"99",
     "backgroundColor": backgroundColor,
     "backgroundImage": backgroundImage,
     "clipPath": clipPath

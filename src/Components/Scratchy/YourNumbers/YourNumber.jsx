@@ -25,7 +25,6 @@ function YourNumber(props) {
       "fontWeight":"bolder",
       "alignItems": "center",
       "justifyContent": "center",
-      "zIndex":"110",
     }}>
       <div style={{"display":"flex", "flexDirection":"column","height":"90%", "width":"90%", "zIndex":"105", "border": border}}>
         <div>

@@ -11,6 +11,7 @@ function YourNumbers(props) {
       "left":"37.46%",
       "top":"33.4%",
       "backgroundColor":"transparent",
+      "zIndex":"150"
     }}>
 
     {props.yourNumbers.map((yourNumbersRow, i) => 
