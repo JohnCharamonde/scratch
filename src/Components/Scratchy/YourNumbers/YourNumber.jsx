@@ -1,5 +1,5 @@
 import React from 'react';
-import Background from './contours.png'
+import Background from '../../../Images/contours.png'
 import YourNumberNumber from './YourNumberNumber.jsx'
 import YourNumberPrize from './YourNumberPrize.jsx'
 

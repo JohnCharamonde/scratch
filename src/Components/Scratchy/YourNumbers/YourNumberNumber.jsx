@@ -1,5 +1,5 @@
 import React from 'react';
-import Background from './contours.png'
+import Background from '../../../Images/contours.png'
 
 function YourNumberNumber(props) {
   let backgroundColor = 'transparent';

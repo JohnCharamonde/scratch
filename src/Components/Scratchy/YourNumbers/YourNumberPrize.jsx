@@ -1,6 +1,6 @@
 import React from 'react';
-import coin from './coin-flip-49.gif';
-import Background from './contours.png'
+import coin from '../../../Images/coin-flip-49.gif';
+import Background from '../../../Images/contours.png'
 
 function YourNumberPrize(props) {
     let backgroundColor = 'transparent';

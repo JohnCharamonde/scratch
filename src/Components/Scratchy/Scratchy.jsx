@@ -1,12 +1,12 @@
 import React from 'react';
-import skin from './skin.png';
-import WinningNumbers from './WinningNumbers.jsx';
-import YourNumbers from './YourNumbers.jsx';
-import PersonalMessage from './PersonalMessage.jsx'
+import skin from '../../Images/skin.png';
+import WinningNumbers from './WinningNumbers/WinningNumbers.jsx';
+import YourNumbers from './YourNumbers/YourNumbers.jsx';
+import PersonalMessage from './PersonalMessage/PersonalMessage.jsx'
 import UIfx from 'uifx';
-import bwongSound from '../Sounds/bwongSound.mp3';
-import scratchSound from '../Sounds/scratchSound.mp3';
-import suspenseSound from '../Sounds/suspense.mp3';
+import bwongSound from '../../Sounds/bwongSound.mp3';
+import scratchSound from '../../Sounds/scratchSound.mp3';
+import suspenseSound from '../../Sounds/suspense.mp3';
 
 class Scratchy extends React.Component {
   constructor(props) {

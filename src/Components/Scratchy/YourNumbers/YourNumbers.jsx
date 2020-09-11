@@ -3,6 +3,7 @@ import YourNumbersRow from './YourNumbersRow.jsx';
 
 function YourNumbers(props) {
   return (
+    <div>
     <div style={{
       "position":"absolute",
       "height": "54.7%",
@@ -20,6 +21,7 @@ function YourNumbers(props) {
           handleYourNumberNumberClick={props.handleYourNumberNumberClick}
         />   
       )}
+    </div>
     </div>
   )
 }

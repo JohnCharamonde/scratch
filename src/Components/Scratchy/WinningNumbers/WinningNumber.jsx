@@ -1,6 +1,5 @@
 import React from 'react';
-import Background from './contours.png'
-
+import Background from '../../../Images/contours.png'
 
 function WinningNumber(props) {
   const shapes = {

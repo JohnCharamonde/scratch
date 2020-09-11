@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from './Components/NavBar.jsx'
-import Scratchy from './Components/Scratchy.jsx'
+import NavBar from './Components/NavigationBar/NavigationBar.jsx'
+import Scratchy from './Components/Scratchy/Scratchy.jsx'
 
 function App() {
   return (
