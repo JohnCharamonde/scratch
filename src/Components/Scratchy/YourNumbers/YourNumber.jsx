@@ -10,7 +10,7 @@ function YourNumber(props) {
 
   if(props.yourNumber.numberClickCount > 1 && props.yourNumber.prizeClickCount > 1) {
     backgroundColor = "aqua";
-    backgroundImage = "url(" + Background + ")";
+    backgroundImage = `url(${Background})`;
     border = ".1px solid pink";
   }
   return (

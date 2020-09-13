@@ -1,5 +1,5 @@
 import React from 'react';
-import orca from '../../../Images/orca.png';
+import prize from '../../../Images/prize.png';
 // import Background from '../../../Images/contours.png'
 
 function YourNumberPrizeButton(props) {
@@ -8,13 +8,13 @@ function YourNumberPrizeButton(props) {
     <div style={{
     "display":"flex",
     "justifyContent":"center",
-    "alignItems":"center",
+    "alignItems":"flex-start",
     "height":"50%",
     "width":"100%",
     }}
     onClick = {(e) => {props.handleYourNumberPrizeButtonClick(e, props.i, props.j)}}
     >
-      <img src={orca} alt="Orca" style={{"height":"100%", "opacity":opacity}} />
+      <img src={prize} alt="Prize" style={{"height":"70%", "opacity":opacity}} />
     </div>
   )
 }
