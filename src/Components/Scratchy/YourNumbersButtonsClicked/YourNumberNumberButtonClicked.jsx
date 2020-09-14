@@ -7,7 +7,7 @@ function YourNumberNumberButtonClicked(props) {
     <div style={{
     "display":"flex",
     "justifyContent":"center",
-    "alignItems":"center",
+    "alignItems":"flex-end",
     "height":"50%",
     "width":"100%",
     }}

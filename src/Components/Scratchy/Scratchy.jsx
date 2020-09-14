@@ -21,38 +21,42 @@ class Scratchy extends React.Component {
         {number: 9, text: 'NINE', shape:'c', clickCount: 0},
         {number: 7, text: 'SEVN', shape:'c', clickCount: 0},
       ],
+      winningNumbersClicked: [],
       yourNumbers: [
         [
-          {number: 41, text: 'FRON', shape:'c', numberClickCount: 0, prizeClickCount: 0},
-          {number: 33, text: 'TRTR', shape:'d', numberClickCount: 0, prizeClickCount: 0},
-          {number: 28, text: 'TNET', shape:'e', numberClickCount: 0, prizeClickCount: 0},
-          {number: 19, text: 'NNTN', shape:'c', numberClickCount: 0, prizeClickCount: 0}
+          {number: 41, text: 'FRON', shape:'c', status: [0, 0, 'uncertain']},
+          {number: 33, text: 'TRTR', shape:'d', status: [0, 0, 'uncertain']},
+          {number: 28, text: 'TNET', shape:'e', status: [0, 0, 'uncertain']},
+          {number: 19, text: 'NNTN', shape:'c', status: [0, 0, 'uncertain']}
         ],
         [
-          {number: 23, text: 'TNTR', shape:'e', numberClickCount: 0, prizeClickCount: 0},
-          {number: 12, text: 'TWLV', shape:'d', numberClickCount: 0, prizeClickCount: 0},
-          {number: 8, text: 'EIGH', shape:'e', numberClickCount: 0, prizeClickCount: 0},
-          {number: 27, text: 'TNSV', shape:'c', numberClickCount: 0, prizeClickCount: 0}
+          {number: 23, text: 'TNTR', shape:'e', status: [0, 0, 'uncertain']},
+          {number: 12, text: 'TWLV', shape:'d', status: [0, 0, 'uncertain']},
+          {number: 8, text: 'EIGH', shape:'e', status: [0, 0, 'uncertain']},
+          {number: 27, text: 'TNSV', shape:'c', status: [0, 0, 'uncertain']}
         ],
         [
-          {number: 34, text: 'TRFR', shape:'e', numberClickCount: 0, prizeClickCount: 0},
-          {number: 1, text: 'ONE', shape:'d', numberClickCount: 0, prizeClickCount: 0},
-          {number: 48, text: 'FRET', shape:'c', numberClickCount: 0, prizeClickCount: 0},
-          {number: 45, text: 'FRFV', shape:'d', numberClickCount: 0, prizeClickCount: 0}
+          {number: 34, text: 'TRFR', shape:'e', status: [0, 0, 'uncertain']},
+          {number: 1, text: 'ONE', shape:'d', status: [0, 0, 'uncertain']},
+          {number: 48, text: 'FRET', shape:'c', status: [0, 0, 'uncertain']},
+          {number: 45, text: 'FRFV', shape:'d', status: [0, 0, 'uncertain']}
         ],
         [
-          {number: 16, text: 'SXTN', shape:'e', numberClickCount: 0, prizeClickCount: 0},
-          {number: 25, text: 'TNFV', shape:'d', numberClickCount: 0, prizeClickCount: 0},
-          {number: 26, text: 'TNSX', shape:'c', numberClickCount: 0, prizeClickCount: 0},
-          {number: 36, text: 'TRSX', shape:'e', numberClickCount: 0, prizeClickCount: 0}
+          {number: 16, text: 'SXTN', shape:'e', status: [0, 0, 'uncertain']},
+          {number: 25, text: 'TNFV', shape:'d', status: [0, 0, 'uncertain']},
+          {number: 26, text: 'TNSX', shape:'c', status: [0, 0, 'uncertain']},
+          {number: 36, text: 'TRSX', shape:'e', status: [0, 0, 'uncertain']}
         ],
         [
-          {number: 20, text: 'TNTY', shape:'d', numberClickCount: 0, prizeClickCount: 0},
-          {number: 49, text: 'FRNN', shape:'c', numberClickCount: 0, prizeClickCount: 0},
-          {number: 11, text: 'ELVN', shape:'e', numberClickCount: 0, prizeClickCount: 0},
-          {number: 10, text: 'TEN', shape:'c', numberClickCount: 0, prizeClickCount: 0}
+          {number: 20, text: 'TNTY', shape:'d', status: [0, 0, 'uncertain']},
+          {number: 49, text: 'FRNN', shape:'c', status: [0, 0, 'uncertain']},
+          {number: 11, text: 'ELVN', shape:'e', status: [0, 0, 'uncertain']},
+          {number: 10, text: 'TEN', shape:'c', status: [0, 0, 'uncertain']}
         ],
-      ]
+      ],
+      unclaimedPrizes: [],
+      uncertainYourNumbersClicked: [],
+      uncertainYourNumbersClickedCoordinates: []
     }
   }
 
@@ -76,22 +80,79 @@ class Scratchy extends React.Component {
   }
 
   handleYourNumberNumberButtonClick(e, i, j) {
-    if(this.state.yourNumbers[i][j].numberClickCount < 2) {
-      let newYourNumbers = this.state.yourNumbers;
-      newYourNumbers[i][j].numberClickCount++;
-      this.setState({
-        yourNumbers: newYourNumbers
-      })
-    }
+    const number = this.state.yourNumbers[i][j].number;
+    let numberStatus = this.state.yourNumbers[i][j].status[0];
+    let prizeStatus = this.state.yourNumbers[i][j].status[1];
+    let gameStatus = this.state.yourNumbers[i][j].status[2];
+    let winningNumbersClicked = this.state.winningNumbersClicked;
+    let unclaimedPrizes = this.state.unclaimedPrizes;
+    let uncertainYourNumbersClicked = this.state.uncertainYourNumbersClicked;
+    let uncertainYourNumbersClickedCoordinates = this.state.uncertainYourNumbersClickedCoordinates;
 
     const scratch = new Audio(scratchSound);
-    const bwong = new Audio(bwongSound);
-    
-    if(this.state.yourNumbers[i][j].numberClickCount === 1) {
-      scratch.play()
-    } else {
-      bwong.play();
-    }
+    const uncertain = new Audio(bwongSound);
+    const win = new Audio(winSound);
+    const loss = new Audio(lossSound);
+    const mysterPrize = new Audio(mysteryPrizeSound) 
+
+    if(gameStatus === 'uncertain') {
+      if(numberStatus === 0 && prizeStatus === 0) {
+        numberStatus++;
+        if(number in winningNumbersClicked) {
+          gameStatus = 'win';
+          unclaimedPrizes.push([i, j])
+          scratch.play();
+          setTimeout(() => {win.play()}, 1000);
+        } else if(winningNumbersClicked.length === 5){
+          gameStatus = 'loss';
+          scratch.play();
+          setTimeout(() => {loss.play()}, 1000);
+        } else {
+          uncertainYourNumbersClicked.push(number)
+          uncertainYourNumbersClickedCoordinates.push([i, j])
+          scratch.play();
+          setTimeout(() => {uncertain.play()}, 1000);
+        }
+      } else if(numberStatus === 1 && prizeStatus === 0) {
+        prizeStatus++;
+        mysteryPrize.play();
+      } else if(numberStatus === 0 && prizeStatus === 1) {
+        numberStatus++;
+        if(number in winningNumbersClicked) {
+          gameStatus = 'win';
+          unclaimedPrizes.push([i, j])
+          win.play();
+        } else if(winningNumbersClicked.length === 5){
+          gameStatus = 'loss';
+          loss.play();
+        } else {
+          uncertainYourNumbersClicked.push(number)
+          uncertainYourNumbersClickedCoordinates.push([i, j])
+          uncertain.play();
+        }
+      } else if(numberStatus === 1 && prizeStatus === 1) {
+        numberStatus++;
+        prizeStatus++;
+        uncertain.play();
+      } else if(numberStatus === 2 && prizeStatus === 2) {
+        uncertain.play();
+      }
+     } else if(gameStatus === 'loss') {
+       numberStatus = 2;
+       prizeStatus = 2;
+       loss.play();
+     } else if(gameStatus === 'win') {
+      numberStatus = 2;
+      prizeStatus = 2;
+      win.play();
+     }
+
+    this.setState({
+      status: [numberStatus, prizeStatus, gameStatus],
+      unclaimedPrizes: unclaimedPrizes,
+      uncertainYourNumbersClicked: uncertainYourNumbersClicked,
+      uncertainYourNumbersClickedCoordinates: uncertainYourNumbersClickedCoordinates
+    })
   }
 
 
