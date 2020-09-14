@@ -53,7 +53,10 @@ class Scratchy extends React.Component {
           {number: 11, text: 'ELVN', shape:'e', status: [0, 0, 'uncertain']},
           {number: 10, text: 'TEN', shape:'c', status: [0, 0, 'uncertain']}
         ],
-      ]
+      ],
+      unclaimedPrizes: [],
+      uncertainYourNumbersClicked: [],
+      uncertainYourNumbersClickedCoordinates: []
     }
   }
 
@@ -77,11 +80,14 @@ class Scratchy extends React.Component {
   }
 
   handleYourNumberNumberButtonClick(e, i, j) {
-    const numberStatus = this.state.yourNumbers[i][j].status[0];
-    const prizeStatus = this.state.yourNumbers[i][j].status[1];
-    const gameStatus = this.state.yourNumbers[i][j].status[2];
     const number = this.state.yourNumbers[i][j].number;
-    const winningNumbersClicked = this.state.winningNumbersClicked;
+    let numberStatus = this.state.yourNumbers[i][j].status[0];
+    let prizeStatus = this.state.yourNumbers[i][j].status[1];
+    let gameStatus = this.state.yourNumbers[i][j].status[2];
+    let winningNumbersClicked = this.state.winningNumbersClicked;
+    let unclaimedPrizes = this.state.unclaimedPrizes;
+    let uncertainYourNumbersClicked = this.state.uncertainYourNumbersClicked;
+    let uncertainYourNumbersClickedCoordinates = this.state.uncertainYourNumbersClickedCoordinates;
 
     const scratch = new Audio(scratchSound);
     const uncertain = new Audio(bwongSound);
@@ -89,22 +95,63 @@ class Scratchy extends React.Component {
     const loss = new Audio(lossSound);
     const mysterPrize = new Audio(mysteryPrizeSound) 
 
-    if(numberStatus === 0 && prizeStatus === 0) {
-      numberStatus++;
-      if(number in winningNumbersClicked) {
-        scratch.play();
-        setTimeout(() => {win.play()}, 1000)
-        this.state.unclaimedPrizes.push()
+    if(gameStatus === 'uncertain') {
+      if(numberStatus === 0 && prizeStatus === 0) {
+        numberStatus++;
+        if(number in winningNumbersClicked) {
+          gameStatus = 'win';
+          unclaimedPrizes.push([i, j])
+          scratch.play();
+          setTimeout(() => {win.play()}, 1000);
+        } else if(winningNumbersClicked.length === 5){
+          gameStatus = 'loss';
+          scratch.play();
+          setTimeout(() => {loss.play()}, 1000);
+        } else {
+          uncertainYourNumbersClicked.push(number)
+          uncertainYourNumbersClickedCoordinates.push([i, j])
+          scratch.play();
+          setTimeout(() => {uncertain.play()}, 1000);
+        }
+      } else if(numberStatus === 1 && prizeStatus === 0) {
+        prizeStatus++;
+        mysteryPrize.play();
+      } else if(numberStatus === 0 && prizeStatus === 1) {
+        numberStatus++;
+        if(number in winningNumbersClicked) {
+          gameStatus = 'win';
+          unclaimedPrizes.push([i, j])
+          win.play();
+        } else if(winningNumbersClicked.length === 5){
+          gameStatus = 'loss';
+          loss.play();
+        } else {
+          uncertainYourNumbersClicked.push(number)
+          uncertainYourNumbersClickedCoordinates.push([i, j])
+          uncertain.play();
+        }
+      } else if(numberStatus === 1 && prizeStatus === 1) {
+        numberStatus++;
+        prizeStatus++;
+        uncertain.play();
+      } else if(numberStatus === 2 && prizeStatus === 2) {
+        uncertain.play();
       }
-    } else if(numberStatus === 1 && prizeStatus === 0 && gameStatus === 'uncertain') {
-      prizeStatus++;
-      
-    }
-
-
+     } else if(gameStatus === 'loss') {
+       numberStatus = 2;
+       prizeStatus = 2;
+       loss.play();
+     } else if(gameStatus === 'win') {
+      numberStatus = 2;
+      prizeStatus = 2;
+      win.play();
+     }
 
     this.setState({
-      status: [numberStatus, prizeStatus, gameStatus]
+      status: [numberStatus, prizeStatus, gameStatus],
+      unclaimedPrizes: unclaimedPrizes,
+      uncertainYourNumbersClicked: uncertainYourNumbersClicked,
+      uncertainYourNumbersClickedCoordinates: uncertainYourNumbersClickedCoordinates
     })
   }
 
