@@ -2,6 +2,7 @@ import React from 'react';
 import skin from '../../Images/skin.png';
 import WinningNumbers from './WinningNumbers/WinningNumbers.jsx';
 import WinningNumbersButtons from './WinningNumbersButtons/WinningNumbersButtons.jsx'
+import WinningNumbersButtonsClicked from './WinningNumbersButtonsClicked/WinningNumbersButtonsClicked.jsx'
 import YourNumbers from './YourNumbers/YourNumbers.jsx';
 import YourNumbersButtons from './YourNumbersButtons/YourNumbersButtons.jsx'
 import YourNumbersButtonsClicked from './YourNumbersButtonsClicked/YourNumbersButtonsClicked.jsx'
@@ -258,6 +259,9 @@ class Scratchy extends React.Component {
           winningNumbers={this.state.winningNumbers}
           handleWinningNumberButtonClick={this.handleWinningNumberButtonClick.bind(this)}
         />
+        <WinningNumbersButtonsClicked 
+          winningNumbers={this.state.winningNumbers}
+        />
         <YourNumbers 
           yourNumbers={this.state.yourNumbers}
         />
@@ -273,6 +277,7 @@ class Scratchy extends React.Component {
         <div style={{
           "display":"flex",
           "backgroundColor":"rgb(25, 24, 27)",
+          // "backgroundColor": "white",
           "width":"27.4%",
           "marginTop":"1%"
         }}>

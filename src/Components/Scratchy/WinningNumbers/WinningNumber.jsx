@@ -16,7 +16,7 @@ function WinningNumber(props) {
       "backgroundColor": "transparent",
       "height": "100%",
       "width": "25%",
-      "zIndex":"101",
+      "zIndex":"102",
       "fontFamily":"Helvetica",
       "fontWeight":"bolder",
       "alignItems": "center",
@@ -34,7 +34,7 @@ function WinningNumber(props) {
 
   if(props.clickCount === 1) {
     return (
-      <div style={{"display":"flex", "backgroundColor": "aqua", "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"101","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "clipPath":shapes[props.shape]}}
+      <div style={{"display":"flex", "backgroundColor": "aqua", "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"102","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "clipPath":shapes[props.shape]}}
       onClick={(e) => {props.handleWinningNumberClick(e, props.i)}}
       >
       <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid pink"}}>
@@ -46,7 +46,7 @@ function WinningNumber(props) {
   }
 
   return (
-      <div style={{"display":"flex", "backgroundColor": "aqua", "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"101","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center"}}
+      <div style={{"display":"flex", "backgroundColor": "aqua", "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"102","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center"}}
       onClick={(e) => {props.handleWinningNumberClick(e, props.i)}}
       >
       <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid pink"}}>
