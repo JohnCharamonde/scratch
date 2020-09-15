@@ -2,7 +2,7 @@ import React from 'react';
 import prize from '../../../Images/prize.png';
 
 function YourNumberPrizeButtonClicked(props) {
-  const opacity = props.clickCount === 1 ? "1" : "-";
+  const opacity = props.status[0] === 1 ? "1" : "0";
   return (
     <div style={{
     "display":"flex",

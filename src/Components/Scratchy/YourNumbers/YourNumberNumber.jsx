@@ -9,16 +9,22 @@ function YourNumberNumber(props) {
   let text = 'ZERO';
   let color = "transparent"
 
-  if(props.clickCount === 1) {
-    backgroundColor = 'aqua'
+  let backgroundColorsByGameStatus = {
+    uncertain: 'linen',
+    loss: 'pink',
+    win: 'aqua'
+  };
+
+  if(props.status[0] === 1) {
+    backgroundColor = backgroundColorsByGameStatus[props.status[2]]
     backgroundImage = "url(" + Background + ")"
     clipPath = "polygon(29% 10%, 29% 35%, 37% 13%, 26% 50%, 33% 40%, 25% 65%, 31% 50%, 26% 70%, 22% 91%, 28% 95%, 41% 96%, 53% 91%, 65% 97%, 76% 67%, 74% 59%, 81% 33%, 74% 11%, 66% 40%, 72% 6%, 63% 8%, 53% 15%, 54% 5%, 46% 13%)"
     color = "black"
     number = props.number
     text = props.text;
-  } else if(props.clickCount > 1 && props.prizeClickCount < 2) {
-    backgroundColor = 'aqua'
-    backgroundImage = "url(" + Background + ")"
+  } else if(props.status[0] >= 1 && props.status[1] >= 1) {
+    // backgroundColor = backgroundColorsByGameStatus[props.status[2]]
+    // backgroundImage = "url(" + Background + ")"
     clipPath = ''
     color = "black"
     number = props.number
@@ -40,7 +46,6 @@ function YourNumberNumber(props) {
       "width":"100%",
       "fontWeight":"bolder"
     }}
-    onClick={(e) => {props.handleYourNumberNumberClick(e, props.i, props.j)}}
     >
       <div style={{"display":"flex", "alignItems": "flex-start", "justifyContent":"center", "fontSize":"160%", "color":color}}>{number}</div>
       <div style={{"display":"flex", "alignItems": "flex-start", "justifyContent":"center", "fontSize":"10%", "color":color}}>{text}</div>

@@ -12,10 +12,6 @@ function YourNumbersRow(props) {
     props.yourNumbersRow.map((yourNumber, j) => 
         <YourNumber 
           yourNumber={yourNumber}
-          i={props.i}
-          j={j}
-          handleYourNumberPrizeClick={props.handleYourNumberPrizeClick}
-          handleYourNumberNumberClick={props.handleYourNumberNumberClick}
         />)
     }
     </div>

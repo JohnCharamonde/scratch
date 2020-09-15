@@ -8,8 +8,14 @@ function YourNumber(props) {
   let backgroundImage = "";
   let border = "";
 
-  if(props.yourNumber.numberClickCount > 1 && props.yourNumber.prizeClickCount > 1) {
-    backgroundColor = "aqua";
+  let backgroundColorsByGameStatus = {
+    uncertain: 'linen',
+    loss: 'pink',
+    win: 'aqua'
+  };
+
+  if(props.yourNumber.status[0] === 2 && props.yourNumber.status[1] === 2) {
+    backgroundColor = backgroundColorsByGameStatus[props.yourNumber.status[2]]
     backgroundImage = `url(${Background})`;
     border = ".1px solid pink";
   }
@@ -31,19 +37,11 @@ function YourNumber(props) {
           <YourNumberNumber 
             number={props.yourNumber.number}
             text={props.yourNumber.text}
-            clickCount={props.yourNumber.numberClickCount}
-            prizeClickCount={props.yourNumber.prizeClickCount}
-            handleYourNumberNumberClick={props.handleYourNumberNumberClick}
-            i={props.i}
-            j={props.j}
+            status={props.yourNumber.status}
           />
         </div>
         <YourNumberPrize 
-          clickCount={props.yourNumber.prizeClickCount}
-          numberClickCount={props.yourNumber.numberClickCount}
-          handleYourNumberPrizeClick={props.handleYourNumberPrizeClick}
-          i={props.i}
-          j={props.j}
+          status={props.yourNumber.status}
         />
       </div>
     </div>

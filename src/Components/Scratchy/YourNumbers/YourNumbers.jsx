@@ -18,8 +18,6 @@ function YourNumbers(props) {
         <YourNumbersRow 
           yourNumbersRow={yourNumbersRow}
           i={i}
-          handleYourNumberPrizeClick={props.handleYourNumberPrizeClick}
-          handleYourNumberNumberClick={props.handleYourNumberNumberClick}
         />   
       )}
     </div>

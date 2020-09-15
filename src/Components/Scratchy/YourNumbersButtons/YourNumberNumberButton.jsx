@@ -3,7 +3,7 @@ import orca from '../../../Images/orca.png';
 // import Background from '../../../Images/contours.png'
 
 function YourNumberNumberButton(props) {
-  const opacity = props.clickCount >= 1 ? "0" : "1";
+  const opacity = props.status[0] >= 1 ? "0" : "1";
   return (
     <div style={{
     "display":"flex",

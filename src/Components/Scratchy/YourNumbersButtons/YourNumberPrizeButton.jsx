@@ -3,7 +3,7 @@ import prize from '../../../Images/prize.png';
 // import Background from '../../../Images/contours.png'
 
 function YourNumberPrizeButton(props) {
-  const opacity = props.clickCount >= 1 ? "0" : "1";
+  const opacity = props.status[1] >= 1 ? "0" : "1";
   return (
     <div style={{
     "display":"flex",
