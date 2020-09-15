@@ -1,6 +1,7 @@
 import React from 'react';
 import skin from '../../Images/skin.png';
 import WinningNumbers from './WinningNumbers/WinningNumbers.jsx';
+import WinningNumbersButtons from './WinningNumbersButtons/WinningNumbersButtons.jsx'
 import YourNumbers from './YourNumbers/YourNumbers.jsx';
 import YourNumbersButtons from './YourNumbersButtons/YourNumbersButtons.jsx'
 import YourNumbersButtonsClicked from './YourNumbersButtonsClicked/YourNumbersButtonsClicked.jsx'
@@ -24,7 +25,7 @@ class Scratchy extends React.Component {
         {number: 9, text: 'NINE', shape:'c', clickCount: 0},
         {number: 7, text: 'SEVN', shape:'c', clickCount: 0},
       ],
-      winningNumbersClicked: [41, 13, 10, 4],
+      winningNumbersClicked: [],
       yourNumbers: [
         [
           {number: 41, text: 'FRON', shape:'c', status: [0, 0, 'uncertain']},
@@ -69,7 +70,7 @@ class Scratchy extends React.Component {
     }
   }
 
-  handleWinningNumberClick(e, i) {
+  handleWinningNumberButtonClick(e, i) {
     if(this.state.winningNumbers[i].clickCount < 2) {
       let newWinningNumbers = this.state.winningNumbers;
       newWinningNumbers[i].clickCount++;
@@ -252,7 +253,10 @@ class Scratchy extends React.Component {
         <img src={skin} alt="Skin" style={{"height": "60%", "width":"60%", "marginTop": "1%", "zIndex":"100"}}/>
         <WinningNumbers 
           winningNumbers={this.state.winningNumbers}
-          handleWinningNumberClick={this.handleWinningNumberClick.bind(this)}
+        />
+        <WinningNumbersButtons 
+          winningNumbers={this.state.winningNumbers}
+          handleWinningNumberButtonClick={this.handleWinningNumberButtonClick.bind(this)}
         />
         <YourNumbers 
           yourNumbers={this.state.yourNumbers}
