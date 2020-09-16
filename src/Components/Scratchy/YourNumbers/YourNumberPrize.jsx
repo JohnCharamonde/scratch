@@ -9,7 +9,7 @@ function YourNumberPrize(props) {
     let opacity = "0"
   
     let backgroundColorsByGameStatus = {
-      uncertain: 'linen',
+      uncertain: 'white',
       loss: 'pink',
       win: 'aqua'
     };

@@ -10,7 +10,7 @@ function YourNumberNumber(props) {
   let color = "transparent"
 
   let backgroundColorsByGameStatus = {
-    uncertain: 'linen',
+    uncertain: 'white',
     loss: 'pink',
     win: 'aqua'
   };

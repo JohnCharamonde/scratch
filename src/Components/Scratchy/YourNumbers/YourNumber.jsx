@@ -9,7 +9,7 @@ function YourNumber(props) {
   let border = "";
 
   let backgroundColorsByGameStatus = {
-    uncertain: 'linen',
+    uncertain: 'white',
     loss: 'pink',
     win: 'aqua'
   };

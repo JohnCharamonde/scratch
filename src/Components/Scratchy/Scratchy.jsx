@@ -73,62 +73,79 @@ class Scratchy extends React.Component {
   }
 
   handleWinningNumberButtonClick(e, i) {
-    let newWinningNumbersClicked = this.state.winningNumbersClicked;
     let newYourNumbers = this.state.yourNumbers;
     let newWinningNumbers = this.state.winningNumbers;
-    let coordinates = this.state.uncertainYourNumbersClickedCoordinates;
-    let yourNumbersClicked = this.state.yourNumbersClicked;
+
 
     const win = new Audio(winSound);
     const loss = new Audio(lossSound)
+    const scratch = new Audio(scratchSound);
+    const uncertain = new Audio(bwongSound);
 
-    if(yourNumbersClicked.length === 20) {
-      if(yourNumbersClicked.indexOf(this.state.winningNumbers[i].number) === -1) {
-        newWinningNumbersClicked[i].status = 'loss';
-        loss.play()
-      }
-    }
-
-    if(this.state.winningNumbers[i].clickCount < 2) {
+    if(newWinningNumbers[i].clickCount < 2) {
       newWinningNumbers[i].clickCount++;
-
-      if(this.state.winningNumbersClicked.indexOf(this.state.winningNumbers[i].number) === -1) {
-        newWinningNumbersClicked.push(this.state.winningNumbers[i].number);
       
-        for(let i = 0; i < coordinates.length; i++) {
-          if(newWinningNumbersClicked.indexOf(newYourNumbers[coordinates[i][0]][coordinates[i][1]].number) !== -1) {
-            newYourNumbers[coordinates[i][0]][coordinates[i][1]].status[2] = 'win';  
-            newWinningNumbers[i].status = 'win';
-            setTimeout(() => {win.play()}, 700);
+      for(let k = 0; k < newYourNumbers.length; k++) {
+        for(let l = 0; l < newYourNumbers[k].length; l++) {
+          if(newWinningNumbers[i].number === newYourNumbers[k][l].number &&
+            newYourNumbers[k][l].status[0] > 0 &&
+            newYourNumbers[k][l].status[2] === 'uncertain') {
+              newYourNumbers[k][l].status[2] = 'win';
+              newWinningNumbers[i].status = 'win';
           }
         }
+      }
 
-        if(newWinningNumbersClicked.length === 5) {
-          for(let i = 0; i < coordinates.length; i++) {
-            if(newWinningNumbersClicked.indexOf(newYourNumbers[coordinates[i][0]][coordinates[i][1]].number) === -1) {
-              newYourNumbers[coordinates[i][0]][coordinates[i][1]].status[2] = 'loss'; 
-            } else {
-              newYourNumbers[coordinates[i][0]][coordinates[i][1]].status[2] = 'win';
-              setTimeout(() => {win.play()}, 700);
+
+        const winningNumbersClickedCount = newWinningNumbers.reduce((acc, num) => {
+          if(num.clickCount > 0) {
+            acc++;
+          }
+          return acc;
+        }, 0)
+
+        const yourNumbersClickedCount = newYourNumbers.reduce((acc, numRow) => {
+          acc += numRow.reduce((a, num) => {
+            if(num.status[0] > 0) {
+              a++;
+              }
+              return a;
+          }, 0)
+          return acc;
+        }, 0)
+
+        console.log(yourNumbersClickedCount)
+
+        if(winningNumbersClickedCount === 5) {
+          for(let k = 0; k < newYourNumbers.length; k++) {
+            for(let l = 0; l < newYourNumbers[k].length; l++) {
+              if(newYourNumbers[k][l].status[0] > 0 && newYourNumbers[k][l].status[2] === 'uncertain') {
+                newYourNumbers[k][l].status[2] = 'loss'
+              }
             }
           }
         }
-      }  
-  
+
+        if(yourNumbersClickedCount === 20 && newWinningNumbers[i].status === 'uncertain') {
+          newWinningNumbers[i].status = 'loss'; 
+        }
+
       this.setState({
         winningNumbers: newWinningNumbers,
-        winningNumbersClicked: newWinningNumbersClicked,
         yourNumbers: newYourNumbers
       })
     }
 
-    const scratch = new Audio(scratchSound);
-    const bwong = new Audio(bwongSound);
-    
     if(this.state.winningNumbers[i].clickCount === 1) {
-      scratch.play()
+      scratch.play();
     } else {
-      bwong.play();
+      if(this.state.winningNumbers[i].status === 'uncertain') {
+        uncertain.play();
+      } else if(this.state.winningNumbers[i].status === 'win') {
+        win.play();
+      } else if(this.state.winningNumbers[i].status === 'loss') {
+        loss.play();
+      }
     }
   }
 
@@ -167,15 +184,12 @@ class Scratchy extends React.Component {
           setTimeout(() => {win.play()}, 700);
         } else if(winningNumbersClicked.length === 5){
           newGameStatus = 'loss';
-          console.log('wtf')
           scratch.play();
           setTimeout(() => {loss.play()}, 700);
         } else {
           newUncertainYourNumbersClicked.push(number);
           newUncertainYourNumbersClickedCoordinates.push([i, j]);
           scratch.play();
-          console.log(winningNumbersClicked)
-          console.log(winningNumbersClicked.length)
           setTimeout(() => {uncertain.play()}, 700);
         }
       } else if(numberStatus === 1 && prizeStatus === 0) {

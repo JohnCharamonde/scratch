@@ -10,6 +10,12 @@ function WinningNumber(props) {
     e: "polygon(11% 81%, 17% 83%, 14% 89%, 19% 90%, 22% 86%, 25% 87%, 24% 94%, 29% 94%, 29% 94%, 41% 91%, 50% 93%, 56% 87%, 77% 65%, 53% 93%, 66% 96%, 69% 86%, 74% 86%, 81% 72%, 91% 49%, 98% 24%, 89% 45%, 98% 17%, 85% 38%, 98% 7%, 87% 9%, 86% 3%, 78% 9%, 69% 6%, 58% 12%, 53% 26%, 54% 10%, 42% 13%, 29% 32%, 21% 62%, 26% 38%, 16% 73%, 18% 52%)"
   }
 
+  const backgroundColors= {
+    uncertain: 'white',
+    win: 'aqua',
+    loss: 'pink'
+  }
+
   if(props.clickCount === 0) {
     return (
       <div style={{"display":"flex",
@@ -34,7 +40,7 @@ function WinningNumber(props) {
 
   if(props.clickCount === 1) {
     return (
-      <div style={{"display":"flex", "backgroundColor": "aqua", "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"102","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "clipPath":shapes[props.shape]}}
+      <div style={{"display":"flex", "backgroundColor":backgroundColors[props.status], "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"102","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "clipPath":shapes[props.shape]}}
       onClick={(e) => {props.handleWinningNumberClick(e, props.i)}}
       >
       <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid pink"}}>
@@ -46,7 +52,7 @@ function WinningNumber(props) {
   }
 
   return (
-      <div style={{"display":"flex", "backgroundColor": "aqua", "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"102","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center"}}
+      <div style={{"display":"flex", "backgroundColor":backgroundColors[props.status], "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"102","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center"}}
       onClick={(e) => {props.handleWinningNumberClick(e, props.i)}}
       >
       <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid pink"}}>

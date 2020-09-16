@@ -17,6 +17,7 @@ function WinningNumbers(props) {
           number={winningNumber.number}
           text={winningNumber.text}
           shape={winningNumber.shape}
+          status={winningNumber.status}
           clickCount={winningNumber.clickCount}
           handleWinningNumberClick={props.handleWinningNumberClick}
           i={i}
