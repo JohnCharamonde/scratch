@@ -20,11 +20,11 @@ class Scratchy extends React.Component {
     super(props);
     this.state = {
       winningNumbers: [
-        {number: 40, text: 'FRTY', shape:'e', clickCount: 0},
-        {number: 30, text: 'TRTY', shape:'d', clickCount: 0},
-        {number: 20, text: 'TNTY', shape:'c', clickCount: 0},
-        {number: 9, text: 'NINE', shape:'c', clickCount: 0},
-        {number: 7, text: 'SEVN', shape:'c', clickCount: 0},
+        {number: 40, text: 'FRTY', shape:'e', clickCount: 0, status: 'uncertain'},
+        {number: 30, text: 'TRTY', shape:'d', clickCount: 0, status: 'uncertain'},
+        {number: 20, text: 'TNTY', shape:'c', clickCount: 0, status: 'uncertain'},
+        {number: 9, text: 'NINE', shape:'c', clickCount: 0, status: 'uncertain'},
+        {number: 7, text: 'SEVN', shape:'c', clickCount: 0, status: 'uncertain'},
       ],
       winningNumbersClicked: [],
       yourNumbers: [
@@ -67,16 +67,58 @@ class Scratchy extends React.Component {
         [false, false, false, false]
       ],
       uncertainYourNumbersClicked: [],
-      uncertainYourNumbersClickedCoordinates: []
+      uncertainYourNumbersClickedCoordinates: [],
+      yourNumbersClicked: []
     }
   }
 
   handleWinningNumberButtonClick(e, i) {
+    let newWinningNumbersClicked = this.state.winningNumbersClicked;
+    let newYourNumbers = this.state.yourNumbers;
+    let newWinningNumbers = this.state.winningNumbers;
+    let coordinates = this.state.uncertainYourNumbersClickedCoordinates;
+    let yourNumbersClicked = this.state.yourNumbersClicked;
+
+    const win = new Audio(winSound);
+    const loss = new Audio(lossSound)
+
+    if(yourNumbersClicked.length === 20) {
+      if(yourNumbersClicked.indexOf(this.state.winningNumbers[i].number) === -1) {
+        newWinningNumbersClicked[i].status = 'loss';
+        loss.play()
+      }
+    }
+
     if(this.state.winningNumbers[i].clickCount < 2) {
-      let newWinningNumbers = this.state.winningNumbers;
       newWinningNumbers[i].clickCount++;
+
+      if(this.state.winningNumbersClicked.indexOf(this.state.winningNumbers[i].number) === -1) {
+        newWinningNumbersClicked.push(this.state.winningNumbers[i].number);
+      
+        for(let i = 0; i < coordinates.length; i++) {
+          if(newWinningNumbersClicked.indexOf(newYourNumbers[coordinates[i][0]][coordinates[i][1]].number) !== -1) {
+            newYourNumbers[coordinates[i][0]][coordinates[i][1]].status[2] = 'win';  
+            newWinningNumbers[i].status = 'win';
+            setTimeout(() => {win.play()}, 700);
+          }
+        }
+
+        if(newWinningNumbersClicked.length === 5) {
+          for(let i = 0; i < coordinates.length; i++) {
+            if(newWinningNumbersClicked.indexOf(newYourNumbers[coordinates[i][0]][coordinates[i][1]].number) === -1) {
+              newYourNumbers[coordinates[i][0]][coordinates[i][1]].status[2] = 'loss'; 
+            } else {
+              newYourNumbers[coordinates[i][0]][coordinates[i][1]].status[2] = 'win';
+              setTimeout(() => {win.play()}, 700);
+            }
+          }
+        }
+      }  
+  
       this.setState({
-        winningNumbers: newWinningNumbers
+        winningNumbers: newWinningNumbers,
+        winningNumbersClicked: newWinningNumbersClicked,
+        yourNumbers: newYourNumbers
       })
     }
 
@@ -103,12 +145,17 @@ class Scratchy extends React.Component {
     let newUncertainYourNumbersClicked = this.state.uncertainYourNumbersClicked;
     let newUncertainYourNumbersClickedCoordinates = this.state.uncertainYourNumbersClickedCoordinates;
     let newYourNumbers = this.state.yourNumbers;
+    let newYourNumbersClicked = this.state.yourNumbersClicked;
 
     const scratch = new Audio(scratchSound);
     const uncertain = new Audio(bwongSound);
     const win = new Audio(winSound);
     const loss = new Audio(lossSound);
     const mysteryPrize = new Audio(mysteryPrizeSound) 
+    
+    if(numberStatus === 0) {
+      newYourNumbersClicked.push(number);
+    }
 
     if(gameStatus === 'uncertain') {
       if(numberStatus === 0 && prizeStatus === 0) {
@@ -120,12 +167,15 @@ class Scratchy extends React.Component {
           setTimeout(() => {win.play()}, 700);
         } else if(winningNumbersClicked.length === 5){
           newGameStatus = 'loss';
+          console.log('wtf')
           scratch.play();
           setTimeout(() => {loss.play()}, 700);
         } else {
           newUncertainYourNumbersClicked.push(number);
           newUncertainYourNumbersClickedCoordinates.push([i, j]);
           scratch.play();
+          console.log(winningNumbersClicked)
+          console.log(winningNumbersClicked.length)
           setTimeout(() => {uncertain.play()}, 700);
         }
       } else if(numberStatus === 1 && prizeStatus === 0) {
@@ -175,7 +225,8 @@ class Scratchy extends React.Component {
       yourNumbers: newYourNumbers,
       unclaimedPrizes: newUnclaimedPrizes,
       uncertainYourNumbersClicked: newUncertainYourNumbersClicked,
-      uncertainYourNumbersClickedCoordinates: newUncertainYourNumbersClickedCoordinates
+      uncertainYourNumbersClickedCoordinates: newUncertainYourNumbersClickedCoordinates,
+      yourNumbersClicked: newYourNumbersClicked
     })
   }
 
@@ -277,7 +328,6 @@ class Scratchy extends React.Component {
         <div style={{
           "display":"flex",
           "backgroundColor":"rgb(25, 24, 27)",
-          // "backgroundColor": "white",
           "width":"27.4%",
           "marginTop":"1%"
         }}>
