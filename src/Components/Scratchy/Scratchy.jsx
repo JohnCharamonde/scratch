@@ -26,7 +26,6 @@ class Scratchy extends React.Component {
         {number: 9, text: 'NINE', shape:'c', clickCount: 0, status: 'uncertain'},
         {number: 7, text: 'SEVN', shape:'c', clickCount: 0, status: 'uncertain'},
       ],
-      winningNumbersClicked: [],
       yourNumbers: [
         [
           {number: 41, text: 'FRON', shape:'c', status: [0, 0, 'uncertain']},
@@ -66,9 +65,6 @@ class Scratchy extends React.Component {
         [false, false, false, false],
         [false, false, false, false]
       ],
-      uncertainYourNumbersClicked: [],
-      uncertainYourNumbersClickedCoordinates: [],
-      yourNumbersClicked: []
     }
   }
 
@@ -84,7 +80,7 @@ class Scratchy extends React.Component {
 
     if(newWinningNumbers[i].clickCount < 2) {
       newWinningNumbers[i].clickCount++;
-      
+    }
       for(let k = 0; k < newYourNumbers.length; k++) {
         for(let l = 0; l < newYourNumbers[k].length; l++) {
           if(newWinningNumbers[i].number === newYourNumbers[k][l].number &&
@@ -134,7 +130,6 @@ class Scratchy extends React.Component {
         winningNumbers: newWinningNumbers,
         yourNumbers: newYourNumbers
       })
-    }
 
     if(this.state.winningNumbers[i].clickCount === 1) {
       scratch.play();
@@ -231,6 +226,8 @@ class Scratchy extends React.Component {
         newUnclaimedPrizes[i][j] = false;
       }
      }
+
+
 
 
     newYourNumbers[i][j].status = [newNumberStatus, newPrizeStatus, newGameStatus];
