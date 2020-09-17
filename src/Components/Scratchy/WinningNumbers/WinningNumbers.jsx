@@ -14,11 +14,7 @@ function WinningNumbers(props) {
 
       {props.winningNumbers.map((winningNumber, i) => 
         <WinningNumber 
-          number={winningNumber.number}
-          text={winningNumber.text}
-          shape={winningNumber.shape}
-          status={winningNumber.status}
-          clickCount={winningNumber.clickCount}
+          winningNumber={winningNumber}
           handleWinningNumberClick={props.handleWinningNumberClick}
           i={i}
         />   
