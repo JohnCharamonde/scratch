@@ -13,9 +13,9 @@ function WinningNumbersButtonsClicked(props) {
       "zIndex": "101",
     }}>
 
-      {props.winningNumbers.map((winningNumber, i) => 
+      {props.winningNumbers.map((winningNumber) => 
         <WinningNumberButton
-          clickCount={winningNumber.clickCount}
+          clickCount={winningNumber.visualStatus}
         />   
       )}
     </div>

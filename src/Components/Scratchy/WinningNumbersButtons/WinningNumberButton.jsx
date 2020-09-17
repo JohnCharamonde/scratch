@@ -1,5 +1,4 @@
 import React from 'react';
-import Background from '../../../Images/contours.png'
 import humpback from '../../../Images/humpback.png'
 
 function WinningNumberButton(props) {

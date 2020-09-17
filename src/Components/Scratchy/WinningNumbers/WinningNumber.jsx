@@ -39,7 +39,7 @@ function WinningNumber(props) {
 
   if(props.winningNumber.visualStatus === 1) {
     return (
-      <div style={{"display":"flex", "backgroundColor":backgroundColors[props.winningNumber.winStatus], "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"102","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "clipPath":shapes[props.winningNumber.clipPathIndex]}}>
+      <div style={{"display":"flex", "backgroundColor":backgroundColors[props.winningNumber.winStatus], "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"102","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "clipPath":clipPaths[props.winningNumber.clipPathIndex]}}>
         <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid pink"}}>
         <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"30%", "width":"100%", "fontSize":"160%"}}>{props.winningNumber.number}</div>
         <div style={{"display":"flex", "alignItems": "center", "justifyContent":"center", "height":"20%", "width":"100%", "fontSize":"10%"}}>{props.winningNumber.text}</div>

@@ -103,8 +103,8 @@ class Scratchy extends React.Component {
     const scratch = new Audio(scratchSound);
     const uncertain = new Audio(bwongSound);
 
-    if(newWinningNumbers[i].clickCount < 2) {
-      newWinningNumbers[i].clickCount++;
+    if(newWinningNumbers[i].visualStatus < 2) {
+      newWinningNumbers[i].visualStatus++;
     }
       for(let k = 0; k < newYourNumbers.length; k++) {
         for(let l = 0; l < newYourNumbers[k].length; l++) {
@@ -112,7 +112,7 @@ class Scratchy extends React.Component {
             newYourNumbers[k][l].status[0] > 0 &&
             newYourNumbers[k][l].status[2] === 'uncertain') {
               newYourNumbers[k][l].status[2] = 'win';
-              newWinningNumbers[i].status = 'win';
+              newWinningNumbers[i].winStatus = 'win';
           }
         }
       }
@@ -135,8 +135,6 @@ class Scratchy extends React.Component {
           return acc;
         }, 0)
 
-        console.log(yourNumbersClickedCount)
-
         if(winningNumbersClickedCount === 5) {
           for(let k = 0; k < newYourNumbers.length; k++) {
             for(let l = 0; l < newYourNumbers[k].length; l++) {
@@ -147,8 +145,8 @@ class Scratchy extends React.Component {
           }
         }
 
-        if(yourNumbersClickedCount === 20 && newWinningNumbers[i].status === 'uncertain') {
-          newWinningNumbers[i].status = 'loss'; 
+        if(yourNumbersClickedCount === 20 && newWinningNumbers[i].winStatus === 'uncertain') {
+          newWinningNumbers[i].winStatus = 'loss'; 
         }
 
       this.setState({
@@ -156,14 +154,14 @@ class Scratchy extends React.Component {
         yourNumbers: newYourNumbers
       })
 
-    if(this.state.winningNumbers[i].clickCount === 1) {
+    if(this.state.winningNumbers[i].visualStatus === 1) {
       scratch.play();
     } else {
-      if(this.state.winningNumbers[i].status === 'uncertain') {
+      if(this.state.winningNumbers[i].winStatus === 'uncertain') {
         uncertain.play();
-      } else if(this.state.winningNumbers[i].status === 'win') {
+      } else if(this.state.winningNumbers[i].winStatus === 'win') {
         win.play();
-      } else if(this.state.winningNumbers[i].status === 'loss') {
+      } else if(this.state.winningNumbers[i].winStatus === 'loss') {
         loss.play();
       }
     }

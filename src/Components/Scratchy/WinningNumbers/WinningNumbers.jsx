@@ -12,7 +12,7 @@ function WinningNumbers(props) {
       "top": "15.5%",
     }}>
 
-      {props.winningNumbers.map((winningNumber, i) => 
+      {props.winningNumbers.map((winningNumber) => 
         <WinningNumber 
           winningNumber={winningNumber}
         />   
