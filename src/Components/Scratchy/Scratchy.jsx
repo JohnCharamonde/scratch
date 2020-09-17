@@ -152,12 +152,8 @@ class Scratchy extends React.Component {
     let newPrizeStatus = prizeStatus;
     let gameStatus = this.state.yourNumbers[i][j].status[2];
     let newGameStatus = gameStatus;
-    let winningNumbersClicked = this.state.winningNumbersClicked;
-    let newUnclaimedPrizes = this.state.unclaimedPrizes;
-    let newUncertainYourNumbersClicked = this.state.uncertainYourNumbersClicked;
-    let newUncertainYourNumbersClickedCoordinates = this.state.uncertainYourNumbersClickedCoordinates;
+    let winningNumbers = this.state.winningNumbers;
     let newYourNumbers = this.state.yourNumbers;
-    let newYourNumbersClicked = this.state.yourNumbersClicked;
 
     const scratch = new Audio(scratchSound);
     const uncertain = new Audio(bwongSound);
@@ -165,10 +161,6 @@ class Scratchy extends React.Component {
     const loss = new Audio(lossSound);
     const mysteryPrize = new Audio(mysteryPrizeSound) 
     
-    if(numberStatus === 0) {
-      newYourNumbersClicked.push(number);
-    }
-
     if(gameStatus === 'uncertain') {
       if(numberStatus === 0 && prizeStatus === 0) {
         newNumberStatus++;
@@ -226,9 +218,6 @@ class Scratchy extends React.Component {
         newUnclaimedPrizes[i][j] = false;
       }
      }
-
-
-
 
     newYourNumbers[i][j].status = [newNumberStatus, newPrizeStatus, newGameStatus];
 
