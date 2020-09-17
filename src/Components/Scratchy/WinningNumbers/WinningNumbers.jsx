@@ -15,8 +15,6 @@ function WinningNumbers(props) {
       {props.winningNumbers.map((winningNumber, i) => 
         <WinningNumber 
           winningNumber={winningNumber}
-          handleWinningNumberClick={props.handleWinningNumberClick}
-          i={i}
         />   
       )}
     </div>

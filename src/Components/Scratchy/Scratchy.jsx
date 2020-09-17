@@ -20,11 +20,11 @@ class Scratchy extends React.Component {
     super(props);
     this.state = {
       winningNumbers: [
-        {number: 40, text: 'FRTY', shape:'e', clickCount: 0, status: 'uncertain'},
-        {number: 30, text: 'TRTY', shape:'d', clickCount: 0, status: 'uncertain'},
-        {number: 20, text: 'TNTY', shape:'c', clickCount: 0, status: 'uncertain'},
-        {number: 9, text: 'NINE', shape:'c', clickCount: 0, status: 'uncertain'},
-        {number: 7, text: 'SEVN', shape:'c', clickCount: 0, status: 'uncertain'},
+        {number: 40, text: 'FRTY', clipPathIndex: 4, visualStatus: 0, winStatus: 'uncertain'},
+        {number: 30, text: 'TRTY', clipPathIndex: 3, visualStatus: 0, winStatus: 'uncertain'},
+        {number: 20, text: 'TNTY', clipPathIndex: 2, visualStatus: 0, winStatus: 'uncertain'},
+        {number: 9, text: 'NINE', clipPathIndex: 2, visualStatus: 0, winStatus: 'uncertain'},
+        {number: 7, text: 'SEVN', clipPathIndex: 2, visualStatus: 0, winStatus: 'uncertain'},
       ],
       yourNumbers: [
         [
@@ -58,12 +58,37 @@ class Scratchy extends React.Component {
           {number: 10, text: 'TEN', shape:'c', status: [0, 0, 'uncertain']}
         ],
       ],
-      unclaimedPrizes: [
-        [false, false, false, false],
-        [false, false, false, false],
-        [false, false, false, false],
-        [false, false, false, false],
-        [false, false, false, false]
+      prizes: [
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false
+        ],
       ],
     }
   }
