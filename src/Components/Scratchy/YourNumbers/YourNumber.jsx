@@ -14,8 +14,8 @@ function YourNumber(props) {
     win: 'aqua'
   };
 
-  if(props.yourNumber.status[0] === 2 && props.yourNumber.status[1] === 2) {
-    backgroundColor = backgroundColorsByGameStatus[props.yourNumber.status[2]]
+  if(props.yourNumber.audioVisualStatus === 2 && props.prize.audioVisualStatus === 2) {
+    backgroundColor = backgroundColorsByGameStatus[props.yourNumber.winStatus]
     backgroundImage = `url(${Background})`;
     border = ".1px solid pink";
   }
@@ -35,13 +35,13 @@ function YourNumber(props) {
       <div style={{"display":"flex", "flexDirection":"column","height":"90%", "width":"90%", "zIndex":"105", "border": border}}>
         <div>
           <YourNumberNumber 
-            number={props.yourNumber.number}
-            text={props.yourNumber.text}
-            status={props.yourNumber.status}
+            yourNumber={props.yourNumber}
+            prize={props.prize}
           />
         </div>
-        <YourNumberPrize 
-          status={props.yourNumber.status}
+        <YourNumberPrize
+          yourNumber={props.yourNumber}
+          prize={props.prize}
         />
       </div>
     </div>

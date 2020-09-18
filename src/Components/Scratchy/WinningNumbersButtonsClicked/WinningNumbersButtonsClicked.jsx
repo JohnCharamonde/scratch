@@ -15,7 +15,7 @@ function WinningNumbersButtonsClicked(props) {
 
       {props.winningNumbers.map((winningNumber) => 
         <WinningNumberButton
-          clickCount={winningNumber.visualStatus}
+          audioVisualStatus={winningNumber.audioVisualStatus}
         />   
       )}
     </div>

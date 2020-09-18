@@ -12,6 +12,7 @@ function YourNumbersRow(props) {
     props.yourNumbersRow.map((yourNumber, j) => 
         <YourNumber 
           yourNumber={yourNumber}
+          prize={props.prizesRow[j]}
         />)
     }
     </div>

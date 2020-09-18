@@ -12,7 +12,7 @@ function NavBar() {
       <div style={{"display":"flex", "alignItems":"center","fontFamily":"Apercu,Lucida Grande,sans-serif", "fontSize":"100%", "width":"40%", "justifyContent": "Space-between"}}>
           <div>Play</div>
           <div>Create</div>
-          <div>Staking</div>
+          <div>Stake</div>
           <div>Marketplace</div>
           <div>About</div>
       </div>

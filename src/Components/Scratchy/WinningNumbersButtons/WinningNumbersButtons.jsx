@@ -15,7 +15,7 @@ function WinningNumbersButtons(props) {
 
       {props.winningNumbers.map((winningNumber, i) => 
         <WinningNumberButton
-          visualStatus={winningNumber.visualStatus}
+          audioVisualStatus={winningNumber.audioVisualStatus}
           i={i}
           handleWinningNumberButtonClick={props.handleWinningNumberButtonClick}
         />   

@@ -20,74 +20,74 @@ class Scratchy extends React.Component {
     super(props);
     this.state = {
       winningNumbers: [
-        {number: 40, text: 'FRTY', clipPathIndex: 4, visualStatus: 0, winStatus: 'uncertain'},
-        {number: 30, text: 'TRTY', clipPathIndex: 3, visualStatus: 0, winStatus: 'uncertain'},
-        {number: 20, text: 'TNTY', clipPathIndex: 2, visualStatus: 0, winStatus: 'uncertain'},
-        {number: 9, text: 'NINE', clipPathIndex: 2, visualStatus: 0, winStatus: 'uncertain'},
-        {number: 7, text: 'SEVN', clipPathIndex: 2, visualStatus: 0, winStatus: 'uncertain'},
+        {number: 40, text: 'FRTY', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
+        {number: 30, text: 'TRTY', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+        {number: 20, text: 'TNTY', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+        {number: 9, text: 'NINE', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+        {number: 7, text: 'SEVN', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
       ],
       yourNumbers: [
         [
-          {number: 41, text: 'FRON', shape:'c', status: [0, 0, 'uncertain']},
-          {number: 33, text: 'TRTR', shape:'d', status: [0, 0, 'uncertain']},
-          {number: 28, text: 'TNET', shape:'e', status: [0, 0, 'uncertain']},
-          {number: 19, text: 'NNTN', shape:'c', status: [0, 0, 'uncertain']}
+          {number: 41, text: 'FRON', clipPathIndex: 2, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 33, text: 'TRTR', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 28, text: 'TNET', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 19, text: 'NNTN', clipPathIndex: 4, audioVisualstatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 23, text: 'TNTR', shape:'e', status: [0, 0, 'uncertain']},
-          {number: 12, text: 'TWLV', shape:'d', status: [0, 0, 'uncertain']},
-          {number: 8, text: 'EIGH', shape:'e', status: [0, 0, 'uncertain']},
-          {number: 27, text: 'TNSV', shape:'c', status: [0, 0, 'uncertain']}
+          {number: 23, text: 'TNTR', clipPathIndex:4, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 12, text: 'TWLV', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 8, text: 'EIGH', clipPathIndex: 4, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 27, text: 'TNSV', clipPathIndex: 2, audioVisualstatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 34, text: 'TRFR', shape:'e', status: [0, 0, 'uncertain']},
-          {number: 1, text: 'ONE', shape:'d', status: [0, 0, 'uncertain']},
-          {number: 48, text: 'FRET', shape:'c', status: [0, 0, 'uncertain']},
-          {number: 45, text: 'FRFV', shape:'d', status: [0, 0, 'uncertain']}
+          {number: 34, text: 'TRFR', clipPathIndex: 4, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 1, text: 'ONE', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 48, text: 'FRET', clipPathIndex: 2, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 45, text: 'FRFV', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 16, text: 'SXTN', shape:'e', status: [0, 0, 'uncertain']},
-          {number: 25, text: 'TNFV', shape:'d', status: [0, 0, 'uncertain']},
-          {number: 26, text: 'TNSX', shape:'c', status: [0, 0, 'uncertain']},
-          {number: 36, text: 'TRSX', shape:'e', status: [0, 0, 'uncertain']}
+          {number: 16, text: 'SXTN', clipPathIndex: 0, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 25, text: 'TNFV', clipPathIndex: 2, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 26, text: 'TNSX', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 36, text: 'TRSX', clipPathIndex: 4, audioVisualstatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 20, text: 'TNTY', shape:'d', status: [0, 0, 'uncertain']},
-          {number: 49, text: 'FRNN', shape:'c', status: [0, 0, 'uncertain']},
-          {number: 11, text: 'ELVN', shape:'e', status: [0, 0, 'uncertain']},
-          {number: 10, text: 'TEN', shape:'c', status: [0, 0, 'uncertain']}
+          {number: 20, text: 'TNTY', clipPathIndex: 1, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 49, text: 'FRNN', clipPathIndex: 2, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 11, text: 'ELVN', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
+          {number: 10, text: 'TEN', clipPathIndex: 0, audioVisualstatus: 0, winStatus: 'uncertain'}
         ],
       ],
       prizes: [
         [
-          false,
-          false,
-          false,
-          false
+          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          false,
-          false,
-          false,
-          false
+          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          false,
-          false,
-          false,
-          false
+          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          false,
-          false,
-          false,
-          false
+          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          false,
-          false,
-          false,
-          false
+          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
       ],
     }
@@ -103,8 +103,8 @@ class Scratchy extends React.Component {
     const scratch = new Audio(scratchSound);
     const uncertain = new Audio(bwongSound);
 
-    if(newWinningNumbers[i].visualStatus < 2) {
-      newWinningNumbers[i].visualStatus++;
+    if(newWinningNumbers[i].audioVisualStatus < 2) {
+      newWinningNumbers[i].audioVisualStatus++;
     }
       for(let k = 0; k < newYourNumbers.length; k++) {
         for(let l = 0; l < newYourNumbers[k].length; l++) {
@@ -116,7 +116,6 @@ class Scratchy extends React.Component {
           }
         }
       }
-
 
         const winningNumbersClickedCount = newWinningNumbers.reduce((acc, num) => {
           if(num.clickCount > 0) {
@@ -154,7 +153,7 @@ class Scratchy extends React.Component {
         yourNumbers: newYourNumbers
       })
 
-    if(this.state.winningNumbers[i].visualStatus === 1) {
+    if(this.state.winningNumbers[i].audioVisualStatus === 1) {
       scratch.play();
     } else {
       if(this.state.winningNumbers[i].winStatus === 'uncertain') {
@@ -169,14 +168,15 @@ class Scratchy extends React.Component {
 
   handleYourNumberNumberButtonClick(e, i, j) {
     const number = this.state.yourNumbers[i][j].number;
-    let numberStatus = this.state.yourNumbers[i][j].status[0];
+    let numberStatus = this.state.yourNumbers[i][j].audioVisualStatus;
     let newNumberStatus = numberStatus;
-    let prizeStatus = this.state.yourNumbers[i][j].status[1];
+    let prizeStatus = this.state.prizes[i][j].audioVisualStatus;
     let newPrizeStatus = prizeStatus;
-    let gameStatus = this.state.yourNumbers[i][j].status[2];
-    let newGameStatus = gameStatus;
+    let winStatus = this.state.yourNumbers[i][j].winStatus;
+    let newWinStatus = winStatus;
     let winningNumbers = this.state.winningNumbers;
     let newYourNumbers = this.state.yourNumbers;
+    let newPrizes = this.state.prizes;
 
     const scratch = new Audio(scratchSound);
     const uncertain = new Audio(bwongSound);
@@ -184,21 +184,25 @@ class Scratchy extends React.Component {
     const loss = new Audio(lossSound);
     const mysteryPrize = new Audio(mysteryPrizeSound) 
     
-    if(gameStatus === 'uncertain') {
+    const winningNumbersClicked = winningNumbers.reduce((acc, num) => {
+      if(num.audioVisualStatus > 0) {
+        acc.push(num.number)
+      }
+      return acc;
+    }, [])
+
+    if(winStatus === 'uncertain') {
       if(numberStatus === 0 && prizeStatus === 0) {
         newNumberStatus++;
         if(winningNumbersClicked.indexOf(number) >= 0) {
-          newGameStatus = 'win';
-          newUnclaimedPrizes[i][j] = true;
+          newWinStatus = 'win';
           scratch.play();
           setTimeout(() => {win.play()}, 700);
         } else if(winningNumbersClicked.length === 5){
-          newGameStatus = 'loss';
+          newWinStatus = 'loss';
           scratch.play();
           setTimeout(() => {loss.play()}, 700);
         } else {
-          newUncertainYourNumbersClicked.push(number);
-          newUncertainYourNumbersClickedCoordinates.push([i, j]);
           scratch.play();
           setTimeout(() => {uncertain.play()}, 700);
         }
@@ -207,17 +211,13 @@ class Scratchy extends React.Component {
         mysteryPrize.play();
       } else if(numberStatus === 0 && prizeStatus === 1) {
         newNumberStatus++;
-        console.log()
         if(winningNumbersClicked.indexOf(number) >= 0) {
-          newGameStatus = 'win';
-          newUnclaimedPrizes[i][j] = true;
+          newWinStatus = 'win';
           win.play();
         } else if(winningNumbersClicked.length === 5){
-          newGameStatus = 'loss';
+          newWinStatus = 'loss';
           loss.play();
         } else {
-          newUncertainYourNumbersClicked.push(number)
-          newUncertainYourNumbersClickedCoordinates.push([i, j])
           uncertain.play();
         }
       } else if(numberStatus === 1 && prizeStatus === 1) {
@@ -227,29 +227,27 @@ class Scratchy extends React.Component {
       } else if(numberStatus === 2 && prizeStatus === 2) {
         uncertain.play();
       }
-     } else if(gameStatus === 'loss') {
+     } else if(winStatus === 'loss') {
       newNumberStatus = 2;
       newPrizeStatus = 2;
       loss.play();
-     } else if(gameStatus === 'win') {
+     } else if(winStatus === 'win') {
       newNumberStatus = 2;
       newPrizeStatus = 2;
       win.play();
       if(prizeStatus === 2) {
         // TODO OPEN PRIZE SHOWCASE
         alert('OPENING PRIZE SHOWCASE FROM NUMBER BUTTON CLICK')
-        newUnclaimedPrizes[i][j] = false;
+        newPrizes[i][j].hasBeenClaimed = true;
       }
      }
 
-    newYourNumbers[i][j].status = [newNumberStatus, newPrizeStatus, newGameStatus];
+    newYourNumbers[i][j].audioVisualStatus = newNumberStatus
+    newYourNumbers[i][j].winStatus = newWinStatus;
 
     this.setState({
       yourNumbers: newYourNumbers,
-      unclaimedPrizes: newUnclaimedPrizes,
-      uncertainYourNumbersClicked: newUncertainYourNumbersClicked,
-      uncertainYourNumbersClickedCoordinates: newUncertainYourNumbersClickedCoordinates,
-      yourNumbersClicked: newYourNumbersClicked
+      prizes: newPrizes,
     })
   }
 
@@ -338,6 +336,7 @@ class Scratchy extends React.Component {
         />
         <YourNumbers 
           yourNumbers={this.state.yourNumbers}
+          prizes={this.state.prizes}
         />
         <YourNumbersButtons 
           yourNumbers={this.state.yourNumbers}

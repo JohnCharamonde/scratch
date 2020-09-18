@@ -16,7 +16,7 @@ function WinningNumber(props) {
     loss: 'pink'
   }
 
-  if(props.winningNumber.visualStatus === 0) {
+  if(props.winningNumber.audioVisualStatus === 0) {
     return (
       <div style={{"display":"flex",
       "backgroundColor": "transparent",
@@ -37,7 +37,7 @@ function WinningNumber(props) {
   )
   }
 
-  if(props.winningNumber.visualStatus === 1) {
+  if(props.winningNumber.audioVisualStatus === 1) {
     return (
       <div style={{"display":"flex", "backgroundColor":backgroundColors[props.winningNumber.winStatus], "backgroundImage": "url(" + Background + ")","height": "100%", "width": "25%", "zIndex":"102","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "clipPath":clipPaths[props.winningNumber.clipPathIndex]}}>
         <div style={{"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent":"center", "height":"90%", "width":"90%", "border":".1px solid pink"}}>

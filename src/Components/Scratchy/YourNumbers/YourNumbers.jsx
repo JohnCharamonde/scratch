@@ -17,7 +17,7 @@ function YourNumbers(props) {
     {props.yourNumbers.map((yourNumbersRow, i) => 
         <YourNumbersRow 
           yourNumbersRow={yourNumbersRow}
-          i={i}
+          prizesRow={props.prizes[i]}
         />   
       )}
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import humpback from '../../../Images/humpback.png'
 
 function WinningNumberButton(props) {
-  const opacity = props.visualStatus === 0 ? '1' : '0';
+  const opacity = props.audioVisualStatus === 0 ? '1' : '0';
     return (
     <div style={{"display":"flex",
       "backgroundColor": "transparent",
