@@ -2,7 +2,7 @@ import React from 'react';
 import orca from '../../../Images/orca.png';
 
 function YourNumberNumberButtonClicked(props) {
-  const opacity = props.clickCount === 1 ? "1" : "0";
+  const opacity = props.yourNumber.audioVisualStatus === 1 ? "1" : "0";
   return (
     <div style={{
     "display":"flex",

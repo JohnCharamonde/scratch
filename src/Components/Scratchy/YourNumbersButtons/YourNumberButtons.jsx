@@ -3,6 +3,7 @@ import YourNumberNumberButton from './YourNumberNumberButton.jsx'
 import YourNumberPrizeButton from './YourNumberPrizeButton.jsx'
 
 function YourNumberButtons(props) { 
+  console.log(props.prize.audioVisualStatus)
   return (
     <div style={{
       "color":"black",
@@ -14,13 +15,13 @@ function YourNumberButtons(props) {
       "justifyContent": "center",
     }}>
       <YourNumberNumberButton 
-        clickCount={props.yourNumber.numberClickCount}
+        yourNumber={props.yourNumber}
         handleYourNumberNumberButtonClick={props.handleYourNumberNumberButtonClick}
         i={props.i}
         j={props.j}
       />
       <YourNumberPrizeButton
-        clickCount={props.yourNumber.prizeClickCount}
+        prize={props.prize}
         handleYourNumberPrizeButtonClick={props.handleYourNumberPrizeButtonClick}
         i={props.i}
         j={props.j}

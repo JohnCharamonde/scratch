@@ -17,9 +17,7 @@ function YourNumbers(props) {
     {props.yourNumbers.map((yourNumbersRow, i) => 
         <YourNumbersRow 
           yourNumbersRow={yourNumbersRow}
-          i={i}
-          handleYourNumberPrizeClick={props.handleYourNumberPrizeClick}
-          handleYourNumberNumberClick={props.handleYourNumberNumberClick}
+          prizesRow={props.prizes[i]}
         />   
       )}
     </div>

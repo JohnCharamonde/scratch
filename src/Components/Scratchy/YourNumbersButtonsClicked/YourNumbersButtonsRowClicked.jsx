@@ -12,6 +12,7 @@ function YourNumbersButtonsRowClicked(props) {
     props.yourNumbersRow.map((yourNumber, j) => 
         <YourNumberButtonsClicked
           yourNumber={yourNumber}
+          prize={props.prizeRow[j]}
         />)
     }
     </div>

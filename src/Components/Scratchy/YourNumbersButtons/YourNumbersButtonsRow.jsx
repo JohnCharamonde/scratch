@@ -12,6 +12,7 @@ function YourNumbersButtonsRow(props) {
     props.yourNumbersRow.map((yourNumber, j) => 
         <YourNumberButtons
           yourNumber={yourNumber}
+          prize={props.prizesRow[j]}
           i={props.i}
           j={j}
           handleYourNumberPrizeButtonClick={props.handleYourNumberPrizeButtonClick}

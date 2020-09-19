@@ -1,9 +1,9 @@
 import React from 'react';
 import prize from '../../../Images/prize.png';
-// import Background from '../../../Images/contours.png'
 
 function YourNumberPrizeButton(props) {
-  const opacity = props.clickCount >= 1 ? "0" : "1";
+  const opacity = props.prize.audioVisualStatus >= 1 ? "0" : "1";
+
   return (
     <div style={{
     "display":"flex",

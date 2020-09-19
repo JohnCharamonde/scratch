@@ -14,10 +14,10 @@ function YourNumberButtonsClicked(props) {
       "justifyContent": "center",
     }}>
       <YourNumberNumberButtonClicked 
-        clickCount={props.yourNumber.numberClickCount}
+        yourNumber={props.yourNumber}
       />
       <YourNumberPrizeButtonClicked
-        clickCount={props.yourNumber.prizeClickCount}
+        prize={props.prize}
       />
     </div>
   )

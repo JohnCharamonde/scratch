@@ -1,7 +1,7 @@
 import React from 'react';
-import WinningNumber from './WinningNumber.jsx';
+import WinningNumberButton from './WinningNumberButtonClicked.jsx';
 
-function WinningNumbers(props) {
+function WinningNumbersButtonsClicked(props) {
   return (
     <div style={{
       "display": "flex",
@@ -10,15 +10,16 @@ function WinningNumbers(props) {
       "width": "26.75%",
       "left": "37.7%",
       "top": "15.5%",
+      "zIndex": "101",
     }}>
 
       {props.winningNumbers.map((winningNumber) => 
-        <WinningNumber 
-          winningNumber={winningNumber}
+        <WinningNumberButton
+          audioVisualStatus={winningNumber.audioVisualStatus}
         />   
       )}
     </div>
   )
 }
 
-export default WinningNumbers;
+export default WinningNumbersButtonsClicked;
