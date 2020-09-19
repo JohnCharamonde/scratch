@@ -28,34 +28,34 @@ class Scratchy extends React.Component {
       ],
       yourNumbers: [
         [
-          {number: 41, text: 'FRON', clipPathIndex: 2, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 33, text: 'TRTR', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 28, text: 'TNET', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 19, text: 'NNTN', clipPathIndex: 4, audioVisualstatus: 0, winStatus: 'uncertain'}
+          {number: 41, text: 'FRON', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 33, text: 'TRTR', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 28, text: 'TNET', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 19, text: 'NNTN', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 23, text: 'TNTR', clipPathIndex:4, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 12, text: 'TWLV', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 8, text: 'EIGH', clipPathIndex: 4, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 27, text: 'TNSV', clipPathIndex: 2, audioVisualstatus: 0, winStatus: 'uncertain'}
+          {number: 23, text: 'TNTR', clipPathIndex:4, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 12, text: 'TWLV', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 8, text: 'EIGH', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 27, text: 'TNSV', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 34, text: 'TRFR', clipPathIndex: 4, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 1, text: 'ONE', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 48, text: 'FRET', clipPathIndex: 2, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 45, text: 'FRFV', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'}
+          {number: 34, text: 'TRFR', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 1, text: 'ONE', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 48, text: 'FRET', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 45, text: 'FRFV', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 16, text: 'SXTN', clipPathIndex: 0, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 25, text: 'TNFV', clipPathIndex: 2, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 26, text: 'TNSX', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 36, text: 'TRSX', clipPathIndex: 4, audioVisualstatus: 0, winStatus: 'uncertain'}
+          {number: 16, text: 'SXTN', clipPathIndex: 0, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 25, text: 'TNFV', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 26, text: 'TNSX', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 36, text: 'TRSX', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 20, text: 'TNTY', clipPathIndex: 1, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 49, text: 'FRNN', clipPathIndex: 2, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 11, text: 'ELVN', clipPathIndex: 3, audioVisualstatus: 0, winStatus: 'uncertain'},
-          {number: 10, text: 'TEN', clipPathIndex: 0, audioVisualstatus: 0, winStatus: 'uncertain'}
+          {number: 20, text: 'TNTY', clipPathIndex: 1, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 49, text: 'FRNN', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 11, text: 'ELVN', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 10, text: 'TEN', clipPathIndex: 0, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
       ],
       prizes: [
@@ -109,16 +109,16 @@ class Scratchy extends React.Component {
       for(let k = 0; k < newYourNumbers.length; k++) {
         for(let l = 0; l < newYourNumbers[k].length; l++) {
           if(newWinningNumbers[i].number === newYourNumbers[k][l].number &&
-            newYourNumbers[k][l].status[0] > 0 &&
-            newYourNumbers[k][l].status[2] === 'uncertain') {
-              newYourNumbers[k][l].status[2] = 'win';
+            newYourNumbers[k][l].audioVisualStatus > 0 &&
+            newYourNumbers[k][l].winStatus === 'uncertain') {
+              newYourNumbers[k][l].winStatus = 'win';
               newWinningNumbers[i].winStatus = 'win';
           }
         }
       }
 
         const winningNumbersClickedCount = newWinningNumbers.reduce((acc, num) => {
-          if(num.clickCount > 0) {
+          if(num.audioVisualStatus > 0) {
             acc++;
           }
           return acc;
@@ -126,7 +126,7 @@ class Scratchy extends React.Component {
 
         const yourNumbersClickedCount = newYourNumbers.reduce((acc, numRow) => {
           acc += numRow.reduce((a, num) => {
-            if(num.status[0] > 0) {
+            if(num.audioVisualStatus > 0) {
               a++;
               }
               return a;
@@ -137,8 +137,8 @@ class Scratchy extends React.Component {
         if(winningNumbersClickedCount === 5) {
           for(let k = 0; k < newYourNumbers.length; k++) {
             for(let l = 0; l < newYourNumbers[k].length; l++) {
-              if(newYourNumbers[k][l].status[0] > 0 && newYourNumbers[k][l].status[2] === 'uncertain') {
-                newYourNumbers[k][l].status[2] = 'loss'
+              if(newYourNumbers[k][l].audioVisualStatus > 0 && newYourNumbers[k][l].winStatus === 'uncertain') {
+                newYourNumbers[k][l].winStatus = 'loss'
               }
             }
           }
@@ -178,6 +178,7 @@ class Scratchy extends React.Component {
     let newYourNumbers = this.state.yourNumbers;
     let newPrizes = this.state.prizes;
 
+    
     const scratch = new Audio(scratchSound);
     const uncertain = new Audio(bwongSound);
     const win = new Audio(winSound);
@@ -190,7 +191,8 @@ class Scratchy extends React.Component {
       }
       return acc;
     }, [])
-
+    
+    
     if(winStatus === 'uncertain') {
       if(numberStatus === 0 && prizeStatus === 0) {
         newNumberStatus++;
@@ -244,6 +246,7 @@ class Scratchy extends React.Component {
 
     newYourNumbers[i][j].audioVisualStatus = newNumberStatus
     newYourNumbers[i][j].winStatus = newWinStatus;
+    newPrizes[i][j].audioVisualStatus = newPrizeStatus;
 
     this.setState({
       yourNumbers: newYourNumbers,
@@ -253,15 +256,13 @@ class Scratchy extends React.Component {
 
 
   handleYourNumberPrizeButtonClick(e, i, j) {
-    const number = this.state.yourNumbers[i][j].number;
-    let numberStatus = this.state.yourNumbers[i][j].status[0];
+    let numberStatus = this.state.yourNumbers[i][j].audioVisualStatus;
     let newNumberStatus = numberStatus;
-    let prizeStatus = this.state.yourNumbers[i][j].status[1];
+    let prizeStatus = this.state.prizes[i][j].audioVisualStatus;
     let newPrizeStatus = prizeStatus;
-    let gameStatus = this.state.yourNumbers[i][j].status[2];
-    let newGameStatus = gameStatus;
-    let newUnclaimedPrizes = this.state.unclaimedPrizes;
+    let winStatus = this.state.yourNumbers[i][j].winStatus;
     let newYourNumbers = this.state.yourNumbers;
+    let newPrizes = this.state.prizes;
 
     const scratch = new Audio(scratchSound);
     const uncertain = new Audio(bwongSound);
@@ -269,7 +270,7 @@ class Scratchy extends React.Component {
     const loss = new Audio(lossSound);
     const mysteryPrize = new Audio(mysteryPrizeSound) 
 
-    if(gameStatus === 'uncertain') {
+    if(winStatus === 'uncertain') {
       if(numberStatus === 0 && prizeStatus === 0) {
         newPrizeStatus++;
         scratch.play();
@@ -292,7 +293,7 @@ class Scratchy extends React.Component {
         alert('OPEN PRIZE SHOWCASE')
         mysteryPrize.play();
       }
-     } else if(gameStatus === 'loss') {
+     } else if(winStatus === 'loss') {
        newPrizeStatus = 2;
        newNumberStatus = 2;
        loss.play();
@@ -304,25 +305,26 @@ class Scratchy extends React.Component {
        newPrizeStatus = 2;
        newNumberStatus = 2;
        win.play();
-       console.log(newUnclaimedPrizes)
-       if(prizeStatus >= 1) {
-           newUnclaimedPrizes[i][j] = false;
+       
+       if(!this.prizes[i][j].hasBeenClaimed) {
+           newPrizes[i][j].hasBeenClaimed = true;
            alert('OPEN PRIZE SHOWCASE')
          // TODO => OPEN PRIZE SHOWCASE
        }
      }
 
-    newYourNumbers[i][j].status = [newNumberStatus, newPrizeStatus, newGameStatus];
+    newYourNumbers[i][j].audioVisualStatus = newNumberStatus;
+    newPrizes[i][j].audioVisualStatus = newPrizeStatus;
 
     this.setState({
       yourNumbers: newYourNumbers,
-      unclaimedPrizes: newUnclaimedPrizes,
+      prizes: newPrizes,
     })
   }
 
   render() {
     return (
-      <div style={{"position":"absolute","display":"flex", "justifyContent":"Center"}}>
+      <div style={{"position":"absolute","display":"flex", "justifyContent":"Center", "top": "6.5%"}}>
         <img src={skin} alt="Skin" style={{"height": "60%", "width":"60%", "marginTop": "1%", "zIndex":"100"}}/>
         <WinningNumbers 
           winningNumbers={this.state.winningNumbers}
@@ -340,11 +342,13 @@ class Scratchy extends React.Component {
         />
         <YourNumbersButtons 
           yourNumbers={this.state.yourNumbers}
+          prizes={this.state.prizes}
           handleYourNumberPrizeButtonClick={this.handleYourNumberPrizeButtonClick.bind(this)}
           handleYourNumberNumberButtonClick={this.handleYourNumberNumberButtonClick.bind(this)}
         />
         <YourNumbersButtonsClicked 
           yourNumbers={this.state.yourNumbers}
+          prizes={this.state.prizes}
         />
         <PersonalMessage />
         <div style={{

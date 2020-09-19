@@ -14,10 +14,10 @@ function YourNumberButtonsClicked(props) {
       "justifyContent": "center",
     }}>
       <YourNumberNumberButtonClicked 
-        status={props.yourNumber.status}
+        yourNumber={props.yourNumber}
       />
       <YourNumberPrizeButtonClicked
-        status={props.yourNumber.status}
+        prize={props.prize}
       />
     </div>
   )

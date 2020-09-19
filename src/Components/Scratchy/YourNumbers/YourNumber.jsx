@@ -8,14 +8,14 @@ function YourNumber(props) {
   let backgroundImage = "";
   let border = "";
 
-  let backgroundColorsByGameStatus = {
+  let backgroundColorsByWinStatus = {
     uncertain: 'white',
     loss: 'pink',
     win: 'aqua'
   };
 
   if(props.yourNumber.audioVisualStatus === 2 && props.prize.audioVisualStatus === 2) {
-    backgroundColor = backgroundColorsByGameStatus[props.yourNumber.winStatus]
+    backgroundColor = backgroundColorsByWinStatus[props.yourNumber.winStatus]
     backgroundImage = `url(${Background})`;
     border = ".1px solid pink";
   }
