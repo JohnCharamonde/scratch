@@ -1,4 +1,5 @@
 import React from 'react';
+import coins from '../../../Images/coins.png'
 
 function PrizeCalculator(props) {
   return(
@@ -7,156 +8,97 @@ function PrizeCalculator(props) {
       "flexDirection":"column",
       "alignItems":"center",
       "position":"absolute",
-      "backgroundColor":"orange",
+      "backgroundImage": "url(" + coins + ")",
+      "backgroundSize:":"50% 50%",
       "height":"72.7%",
       "width": "26.8%",
       "left":"66.92%",
       "top": "15.5%",
-      "flexWrap":"wrap",
-      "overflow":"scroll"
+      "flexWrap":"nowrap",
+      "overflow":"scroll",
+      "outline":".1px solid gray",
+      "fontFamily":"Helvetica",
+      "fontWeight":"bolder",
     }}>
 
       <div style={{
-          "height":"15%",
+          "display":"flex",
+          "flexDirection":"column",
+          "alignItems": "center",
+          "width":"95%",
+          "backgroundColor":"black",
+          "color":"white",
+          "marginTop": "2.5%",
+          "outline":".1px solid gray"
+
+
+      }}>
+        <div style={{"width":"98%", "marginTop":"2%", "fontSize":"150%", "borderBottom":".1px solid gray"}}>Cryptocurrency</div>
+        <div style={{
           "width":"98%",
-          "backgroundColor":"red",
-          "marginTop": "1%"
-      }}>Cryptocurrency
+          "height":"8vh",
+          "marginTop":".3vh",
+          "borderBottom":".1px solid gray"
+      }}>
+          
+          ETH worth ≈ $100.00
       </div>
+
       <div style={{
-          "height":"10%",
           "width":"98%",
-          "backgroundColor":"blue"
-      }}>1
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"green"
+          "height":"8vh",
+          "marginTop":".3vh",
+          "borderBottom":".1px solid gray"
       }}>2
       </div>
       <div style={{
-          "height":"10%",
           "width":"98%",
-          "backgroundColor":"blue"
+          "height":"8vh",
+          "marginTop":".3vh",
+          "borderBottom":".1px solid gray"
       }}>3
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"green"
-      }}>4
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"blue"
-      }}>5
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"green"
-      }}>6
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"blue"
-      }}>7
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"green"
-      }}>8
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"blue"
-      }}>9
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"green"
-      }}>10
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"blue"
-      }}>11
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"green"
-      }}>12
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"blue"
-      }}>13
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"green"
-      }}>14
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"blue"
-      }}>15
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"green"
-      }}>16
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"blue"
-      }}>17
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"green"
-      }}>18
-      </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"blue"
-      }}>19
       </div>
       <div style={{
           "height":"15%",
           "width":"98%",
-          "backgroundColor":"yellow"
-      }}>TOTAL CRYPTOCURRENCY
+          "fontSize":"150%"
+      }}>TOTAL:
       </div>
+      </div>
+
+
+
+
+
+
       <div style={{
-          "height":"15",
+          "display":"flex",
+          "flexDirection":"column",
+          "alignItems": "center",
           "width":"98%",
-          "backgroundColor":"red",
-          "marginTop":"1%"
-      }}>Collectibles
+          "backgroundColor":"black",
+          "color":"white",
+          "marginTop": "2%",
+          "outline":".1px solid gray"
+
+      }}>
+        <div style={{"width":"100%", "marginTop":"2%", "fontSize":"150%", "borderBottom":".1px solid gray"}}>Collectibles</div>
+        <div style={{
+          "width":"100%",
+          "height":"8vh",
+          "marginTop":".3vh",
+          "borderBottom":".1px solid gray"
+      }}>≈ 1
       </div>
-      <div style={{
-          "height":"10%",
-          "width":"98%",
-          "backgroundColor":"blue",
-          "marginBottom":"1%"
-      }}>20
       </div>
+
+
+
+
+
+
+
+      
     </div>
   )
 }
