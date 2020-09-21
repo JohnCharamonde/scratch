@@ -3,7 +3,6 @@ import YourNumberNumberButton from './YourNumberNumberButton.jsx'
 import YourNumberPrizeButton from './YourNumberPrizeButton.jsx'
 
 function YourNumberButtons(props) { 
-  console.log(props.prize.audioVisualStatus)
   return (
     <div style={{
       "color":"black",

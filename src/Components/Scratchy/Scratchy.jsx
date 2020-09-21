@@ -7,6 +7,7 @@ import YourNumbers from './YourNumbers/YourNumbers.jsx';
 import YourNumbersButtons from './YourNumbersButtons/YourNumbersButtons.jsx'
 import YourNumbersButtonsClicked from './YourNumbersButtonsClicked/YourNumbersButtonsClicked.jsx'
 import PersonalMessage from './PersonalMessage/PersonalMessage.jsx'
+import PrizeCalculator from './PrizeCalculator/PrizeCalculator.jsx'
 import UIfx from 'uifx';
 import bwongSound from '../../Sounds/bwongSound.mp3';
 import scratchSound from '../../Sounds/scratchSound.mp3';
@@ -41,7 +42,7 @@ class Scratchy extends React.Component {
         ],
         [
           {number: 34, text: 'TRFR', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 1, text: 'ONE', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 9, text: 'NINE', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
           {number: 48, text: 'FRET', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
           {number: 45, text: 'FRFV', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
@@ -55,7 +56,7 @@ class Scratchy extends React.Component {
           {number: 20, text: 'TNTY', clipPathIndex: 1, audioVisualStatus: 0, winStatus: 'uncertain'},
           {number: 49, text: 'FRNN', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
           {number: 11, text: 'ELVN', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 10, text: 'TEN', clipPathIndex: 0, audioVisualStatus: 0, winStatus: 'uncertain'}
+          {number: 20, text: 'TNTY', clipPathIndex: 0, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
       ],
       prizes: [
@@ -153,8 +154,17 @@ class Scratchy extends React.Component {
         yourNumbers: newYourNumbers
       })
 
+
     if(this.state.winningNumbers[i].audioVisualStatus === 1) {
-      scratch.play();
+      if(this.state.winningNumbers[i].winStatus === 'uncertain') {
+        scratch.play();
+      } else if(this.state.winningNumbers[i].winStatus === 'win') {
+        scratch.play();
+        setTimeout(() => {win.play()}, 700);
+      } else if(this.state.winningNumbers[i].winStatus === 'loss') {
+        scratch.play();
+        setTimeout(() => {loss.play()}, 700);
+      }
     } else {
       if(this.state.winningNumbers[i].winStatus === 'uncertain') {
         uncertain.play();
@@ -175,6 +185,7 @@ class Scratchy extends React.Component {
     let winStatus = this.state.yourNumbers[i][j].winStatus;
     let newWinStatus = winStatus;
     let winningNumbers = this.state.winningNumbers;
+    let newWinningNumbers = winningNumbers;
     let newYourNumbers = this.state.yourNumbers;
     let newPrizes = this.state.prizes;
 
@@ -191,13 +202,17 @@ class Scratchy extends React.Component {
       }
       return acc;
     }, [])
-    
-    
+  
     if(winStatus === 'uncertain') {
       if(numberStatus === 0 && prizeStatus === 0) {
         newNumberStatus++;
         if(winningNumbersClicked.indexOf(number) >= 0) {
           newWinStatus = 'win';
+          newWinningNumbers.forEach((winningNumber) => {
+            if(winningNumber.number === number) {
+              winningNumber.winStatus = 'win'
+            }
+          })
           scratch.play();
           setTimeout(() => {win.play()}, 700);
         } else if(winningNumbersClicked.length === 5){
@@ -215,6 +230,11 @@ class Scratchy extends React.Component {
         newNumberStatus++;
         if(winningNumbersClicked.indexOf(number) >= 0) {
           newWinStatus = 'win';
+          newWinningNumbers.forEach((winningNumber) => {
+            if(winningNumber.number === number) {
+              winningNumber.winStatus = 'win'
+            }
+          })
           win.play();
         } else if(winningNumbersClicked.length === 5){
           newWinStatus = 'loss';
@@ -248,7 +268,26 @@ class Scratchy extends React.Component {
     newYourNumbers[i][j].winStatus = newWinStatus;
     newPrizes[i][j].audioVisualStatus = newPrizeStatus;
 
+    const viewedYourNumbersCount = newYourNumbers.reduce((acc, numberRow) => {
+      acc += numberRow.reduce((a, number) => {
+       if(number.audioVisualStatus > 0) {
+         a++;
+       } 
+       return a;
+      }, 0)
+      return acc;
+    }, 0)
+
+    if(viewedYourNumbersCount === 20) {
+      newWinningNumbers.forEach((newWinningNumber) => {
+        if(newWinningNumber.winStatus !== 'win') {
+          newWinningNumber.winStatus = 'loss';
+        }
+      })
+    }
+
     this.setState({
+      winningNumbers: newWinningNumbers,
       yourNumbers: newYourNumbers,
       prizes: newPrizes,
     })
@@ -301,15 +340,17 @@ class Scratchy extends React.Component {
          // TODO => OPEN PRIZE SHOWCASE
          alert('OPEN PRIZE SHOWCASE')
        }
-     } else if(gameStatus === 'win') {
+     } else if(winStatus === 'win') {
        newPrizeStatus = 2;
        newNumberStatus = 2;
        win.play();
        
-       if(!this.prizes[i][j].hasBeenClaimed) {
-           newPrizes[i][j].hasBeenClaimed = true;
-           alert('OPEN PRIZE SHOWCASE')
-         // TODO => OPEN PRIZE SHOWCASE
+       if(!this.state.prizes[i][j].hasBeenClaimed) {
+         if(this.state.prizes[i][j].audioVisualStatus > 0) {
+          newPrizes[i][j].hasBeenClaimed = true;
+          alert('OPEN PRIZE SHOWCASE')
+        // TODO => OPEN PRIZE SHOWCASE
+         }
        }
      }
 
@@ -358,6 +399,7 @@ class Scratchy extends React.Component {
           "marginTop":"1%"
         }}>
         </div>
+        <PrizeCalculator />
       </div>
     )
   }
