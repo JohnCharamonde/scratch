@@ -12,11 +12,12 @@ function PrizeCalculator(props) {
       "width": "26.8%",
       "left":"66.92%",
       "top": "15.5%",
-      "flexWrap":"wrap"
+      "flexWrap":"wrap",
+      "overflow":"scroll"
     }}>
 
       <div style={{
-          "height":"25%",
+          "height":"15%",
           "width":"98%",
           "backgroundColor":"red",
           "marginTop": "1%"
