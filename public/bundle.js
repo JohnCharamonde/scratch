@@ -271,22 +271,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
   !*** ./src/Components/Scratchy/PrizeCalculator/PrizeCalculator.jsx ***!
   \*********************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Images_coins_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Images/coins.png */ \"./src/Images/coins.png\");\n/* harmony import */ var _PrizeCalculatorWinningNumber_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PrizeCalculatorWinningNumber.jsx */ \"./src/Components/Scratchy/PrizeCalculator/PrizeCalculatorWinningNumber.jsx\");\n/* harmony import */ var _Images_ethereum_icon_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Images/ethereum-icon.png */ \"./src/Images/ethereum-icon.png\");\n/* harmony import */ var _Images_CryptoKittiesIcon_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Images/CryptoKittiesIcon.png */ \"./src/Images/CryptoKittiesIcon.png\");\n/* harmony import */ var _Images_contours_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Images/contours.png */ \"./src/Images/contours.png\");\n\n\n\n\n\n\n\nfunction PrizeCalculator(props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"flexDirection\": \"column\",\n      \"alignItems\": \"center\",\n      \"position\": \"absolute\",\n      \"backgroundImage\": \"url(\" + _Images_coins_png__WEBPACK_IMPORTED_MODULE_1__[\"default\"] + \")\",\n      \"height\": \"72.7%\",\n      \"width\": \"26.8%\",\n      \"left\": \"66.92%\",\n      \"top\": \"15.5%\",\n      \"flexWrap\": \"nowrap\",\n      \"overflow\": \"scroll\",\n      \"outline\": \".1px solid gray\",\n      \"fontFamily\": \"Helvetica\",\n      \"fontWeight\": \"bolder\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"flexDirection\": \"column\",\n      \"alignItems\": \"center\",\n      \"width\": \"98%\",\n      \"backgroundColor\": \"RGB(80, 80, 80)\",\n      \"color\": \"white\",\n      \"marginTop\": \"1%\",\n      \"outline\": \".1px solid gray\",\n      \"backgroundImage\": \"url(\" + _Images_contours_png__WEBPACK_IMPORTED_MODULE_5__[\"default\"] + \")\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"width\": \"98%\",\n      \"marginTop\": \"2%\",\n      \"fontSize\": \"150%\",\n      \"borderBottom\": \".1px solid gray\",\n      \"color\": \"RGB(255, 153, 204)\",\n      \"fontWeight\": \"bolder\"\n    }\n  }, \"CRYPTOCURRENCY\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"width\": \"98%\",\n      \"height\": \"7vh\",\n      //   \"marginTop\":\".1vh\",\n      \"borderBottom\": \".1px solid gray\",\n      \"display\": \"flex\",\n      \"alignItems\": \"center\" //   \"backgroundColor\":\"aqua\",\n      //   \"color\":\"black\",\n      //   \"backgroundImage\": \"url(\" + Background + \")\",\n      //   \"fontSize\":\"150%\"\n\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PrizeCalculatorWinningNumber_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"height\": \"85%\",\n      \"width\": \"13%\",\n      \"marginLeft\": \"1%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: _Images_ethereum_icon_png__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n    alt: \"ETH\",\n    style: {\n      \"height\": \"100%\"\n    }\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"marginLeft\": \"1%\",\n      \"alignItems\": \"flex-end\",\n      \"justifyContent\": \"space-between\",\n      \"fontSize\": \"150%\",\n      \"height\": \"80%\",\n      \"width\": \"70%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, \"ETH worth\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, \"\\u2248 $50\"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"width\": \"98%\",\n      \"height\": \"7vh\",\n      //   \"marginTop\":\".1vh\",\n      \"borderBottom\": \".1px solid gray\",\n      \"display\": \"flex\",\n      \"alignItems\": \"center\" //   \"fontSize\":\"150%\"\n\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PrizeCalculatorWinningNumber_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"height\": \"70%\",\n      \"width\": \"13%\",\n      \"marginLeft\": \"1%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: _Images_ethereum_icon_png__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n    alt: \"ETH\",\n    style: {\n      \"height\": \"100%\"\n    }\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"marginLeft\": \"1%\",\n      \"alignItems\": \"flex-end\",\n      \"justifyContent\": \"space-between\",\n      \"fontSize\": \"150%\",\n      \"height\": \"80%\",\n      \"width\": \"70%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, \"ETH worth\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, \"\\u2248 $10\"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"width\": \"98%\",\n      \"height\": \"7vh\",\n      //   \"marginTop\":\".1vh\",\n      \"borderBottom\": \".1px solid gray\",\n      \"display\": \"flex\",\n      \"alignItems\": \"center\" //   \"fontSize\":\"150%\"\n\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PrizeCalculatorWinningNumber_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"height\": \"70%\",\n      \"width\": \"13%\",\n      \"marginLeft\": \"1%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: _Images_ethereum_icon_png__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n    alt: \"ETH\",\n    style: {\n      \"height\": \"100%\"\n    }\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"marginLeft\": \"1%\",\n      \"alignItems\": \"flex-end\",\n      \"justifyContent\": \"space-between\",\n      \"fontSize\": \"150%\",\n      \"height\": \"80%\",\n      \"width\": \"70%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, \"ETH worth\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, \"\\u2248 $25\"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"height\": \"15%\",\n      \"width\": \"98%\",\n      \"fontSize\": \"150%\"\n    }\n  }, \"TOTAL:\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"flexDirection\": \"column\",\n      \"alignItems\": \"center\",\n      \"width\": \"98%\",\n      \"backgroundColor\": \"RGB(80, 80, 80)\",\n      //   \"backgroundColor\":\"white\",\n      \"backgroundImage\": \"url(\" + _Images_contours_png__WEBPACK_IMPORTED_MODULE_5__[\"default\"] + \")\",\n      \"marginTop\": \"1%\",\n      \"outline\": \".1px solid gray\",\n      \"color\": \"white\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"width\": \"98%\",\n      \"marginTop\": \"2%\",\n      \"fontSize\": \"150%\",\n      \"borderBottom\": \".1px solid gray\",\n      \"color\": \"RGB(255, 153, 204)\"\n    }\n  }, \"COLLECTIBLES\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"width\": \"98%\",\n      \"height\": \"8vh\",\n      \"marginTop\": \".3vh\",\n      \"borderBottom\": \".1px solid gray\",\n      \"display\": \"flex\",\n      \"alignItems\": \"center\" //   \"marginLeft\":\"1%\"\n      //   \"backgroundColor\":\"aqua\"\n      //   \"fontSize\":\"150%\"\n\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PrizeCalculatorWinningNumber_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"height\": \"70%\",\n      \"width\": \"13%\",\n      \"marginLeft\": \"1%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n    src: _Images_CryptoKittiesIcon_png__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n    alt: \"CK\",\n    style: {\n      \"height\": \"100%\"\n    }\n  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"marginLeft\": \"1%\",\n      \"alignItems\": \"flex-end\",\n      \"justifyContent\": \"space-between\",\n      \"fontSize\": \"150%\",\n      \"height\": \"80%\",\n      \"width\": \"70%\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, \"CryptoKitties NFT\")))));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (PrizeCalculator);\n\n//# sourceURL=webpack:///./src/Components/Scratchy/PrizeCalculator/PrizeCalculator.jsx?");
-
-/***/ }),
-
-/***/ "./src/Components/Scratchy/PrizeCalculator/PrizeCalculatorWinningNumber.jsx":
-/*!**********************************************************************************!*\
-  !*** ./src/Components/Scratchy/PrizeCalculator/PrizeCalculatorWinningNumber.jsx ***!
-  \**********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Images_contours_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Images/contours.png */ \"./src/Images/contours.png\");\n\n\n\nfunction PrizeCalculatorWinningNumber(props) {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"backgroundColor\": \"aqua\",\n      \"backgroundImage\": \"url(\" + _Images_contours_png__WEBPACK_IMPORTED_MODULE_1__[\"default\"] + \")\",\n      \"height\": \"85%\",\n      \"width\": \"13%\",\n      \"zIndex\": \"102\",\n      \"fontFamily\": \"Helvetica\",\n      \"fontWeight\": \"bolder\",\n      \"alignItems\": \"center\",\n      \"justifyContent\": \"center\",\n      \"color\": \"black\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"flexDirection\": \"column\",\n      \"alignItems\": \"center\",\n      \"justifyContent\": \"center\",\n      \"height\": \"90%\",\n      \"width\": \"90%\",\n      \"border\": \".1px solid pink\"\n    }\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"alignItems\": \"flex-end\",\n      \"justifyContent\": \"center\",\n      \"height\": \"65%\",\n      \"width\": \"100%\",\n      \"fontSize\": \"120%\"\n    }\n  }, \"9\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    style: {\n      \"display\": \"flex\",\n      \"alignItems\": \"flex-start\",\n      \"justifyContent\": \"center\",\n      \"height\": \"35%\",\n      \"width\": \"100%\",\n      \"fontSize\": \"20%\"\n    }\n  }, \"NINE\")));\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (PrizeCalculatorWinningNumber);\n\n//# sourceURL=webpack:///./src/Components/Scratchy/PrizeCalculator/PrizeCalculatorWinningNumber.jsx?");
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nError: ENOENT: no such file or directory, open '/Users/johncharamonde/Desktop/Repositories/scratchhappy/src/Components/Scratchy/PrizeCalculator/PrizeCalculator.jsx'\");\n\n//# sourceURL=webpack:///./src/Components/Scratchy/PrizeCalculator/PrizeCalculator.jsx?");
 
 /***/ }),
 
@@ -554,18 +541,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
-/***/ "./src/Images/CryptoKittiesIcon.png":
-/*!******************************************!*\
-  !*** ./src/Images/CryptoKittiesIcon.png ***!
-  \******************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"d3853abf9e8337c65eafbf223721fd04.png\");\n\n//# sourceURL=webpack:///./src/Images/CryptoKittiesIcon.png?");
-
-/***/ }),
-
 /***/ "./src/Images/coin-flip-49.gif":
 /*!*************************************!*\
   !*** ./src/Images/coin-flip-49.gif ***!
@@ -575,18 +550,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"e3088637ea5359afc3c4a104c3d2eb7f.gif\");\n\n//# sourceURL=webpack:///./src/Images/coin-flip-49.gif?");
-
-/***/ }),
-
-/***/ "./src/Images/coins.png":
-/*!******************************!*\
-  !*** ./src/Images/coins.png ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"921d678f649f6d7795e143687d63b727.png\");\n\n//# sourceURL=webpack:///./src/Images/coins.png?");
 
 /***/ }),
 
@@ -611,18 +574,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"7f5300f48e5dd7ada2a764f1b0aad99d.png\");\n\n//# sourceURL=webpack:///./src/Images/contours.png?");
-
-/***/ }),
-
-/***/ "./src/Images/ethereum-icon.png":
-/*!**************************************!*\
-  !*** ./src/Images/ethereum-icon.png ***!
-  \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"46c9aa34d205bfb83c6e64e065148558.png\");\n\n//# sourceURL=webpack:///./src/Images/ethereum-icon.png?");
 
 /***/ }),
 
