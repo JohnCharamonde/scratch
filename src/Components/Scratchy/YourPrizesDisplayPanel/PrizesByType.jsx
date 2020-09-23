@@ -3,6 +3,7 @@ import Prize from './Prize.jsx'
 import Background from '../../../Images/contours.png'
 
 function PrizesByCategory(props) {
+  console.log(props.prizeCoordinates.length)
  return(      
     <div style={{
         "display":"flex",
@@ -25,16 +26,16 @@ function PrizesByCategory(props) {
         "color":"RGB(255, 153, 204)",
         "fontWeight":"bolder"
       }}>
-        <sp>{props.type}</sp>
+        <div>{props.type}</div>
       </div>  
 
       {
-        props.prizeCoordinates.map((prizeCoordinates) => {
+        props.prizeCoordinates.map((prizeCoordinatesPair) => 
           <Prize 
-            prize={props.prizes[prizeCoordinates[0]][prizeCoordinates[1]]}
-            number={props.yourNumbers[prizeCoordinates[0]][prizeCoordinates[1]]}
+            prize={props.prizes[prizeCoordinatesPair[0]][prizeCoordinatesPair[1]]}
+            number={props.yourNumbers[prizeCoordinatesPair[0]][prizeCoordinatesPair[1]]}
           />
-        })
+        )
       }
 
       {
@@ -47,8 +48,8 @@ function PrizesByCategory(props) {
         "display":"flex",
         "justifyContent":"space-between"
         }}>
-          <sp>TOTAL:</sp>
-          <sp>{props.claimedCryptocurrencyTotal || "$0.00"}</sp>
+          <div>TOTAL:</div>
+          <div>{props.claimedCryptocurrencyTotal || "$0.00"}</div>
         </div>
       :
         ''

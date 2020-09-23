@@ -3,6 +3,7 @@ import PrizeWinningNumber from './PrizeWinningNumber.jsx'
 import EthereumIcon from '../../../Images/ethereum-icon.png'
 
 function Prize(props) {
+    console.log(props)
     return (
         <div style={{
             "width":"98%",
@@ -17,8 +18,8 @@ function Prize(props) {
           //   "fontSize":"150%"
         }}>
             <PrizeWinningNumber 
-              number={number.number}
-              text={number.text}
+              number={props.number.number}
+              text={props.number.text}
             />
     
              <div style={{"height":"85%", "width":"13%", "marginLeft":"1%"}}><img src={EthereumIcon} alt="ETH" style={{"height":"100%"}} /></div>

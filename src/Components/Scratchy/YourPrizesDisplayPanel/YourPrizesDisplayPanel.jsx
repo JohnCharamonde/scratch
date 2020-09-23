@@ -20,6 +20,7 @@ function YourPrizesDisplayPanel(props) {
     return acc;
   }, {cryptocurrency:[], collectibles:[]});
 
+
   const claimedCryptocurrencyTotal = coordinatesOfPrizesWonByType.cryptocurrency.reduce((acc, coordinates) => {
     const i = coordinates[0];
     const j = coordinates[1];
