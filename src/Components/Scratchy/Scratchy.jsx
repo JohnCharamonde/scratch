@@ -7,7 +7,7 @@ import YourNumbers from './YourNumbers/YourNumbers.jsx';
 import YourNumbersButtons from './YourNumbersButtons/YourNumbersButtons.jsx'
 import YourNumbersButtonsClicked from './YourNumbersButtonsClicked/YourNumbersButtonsClicked.jsx'
 import PersonalMessage from './PersonalMessage/PersonalMessage.jsx'
-import PrizeCalculator from './PrizeCalculator/PrizeCalculator.jsx'
+import YourPrizesDisplayPanel from './YourPrizesDisplayPanel/YourPrizesDisplayPanel.jsx'
 import UIfx from 'uifx';
 import bwongSound from '../../Sounds/bwongSound.mp3';
 import scratchSound from '../../Sounds/scratchSound.mp3';
@@ -399,7 +399,7 @@ class Scratchy extends React.Component {
           "marginTop":"1%"
         }}>
         </div>
-        <PrizeCalculator />
+        <YourPrizesDisplayPanel />
       </div>
     )
   }

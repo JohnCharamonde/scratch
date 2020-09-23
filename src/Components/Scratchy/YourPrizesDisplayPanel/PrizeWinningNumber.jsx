@@ -1,7 +1,7 @@
 import React from 'react';
 import Background from '../../../Images/contours.png'
 
-function PrizeCalculatorWinningNumber(props) {
+function PrizeWinningNumber(props) {
 
   return (
     <div style={{"display":"flex", "backgroundColor":"aqua", "backgroundImage": "url(" + Background + ")","height": "85%", "width": "13%", "zIndex":"102","fontFamily":"Helvetica", "fontWeight":"bolder", "alignItems": "center", "justifyContent": "center", "color":"black"}}>
@@ -13,4 +13,4 @@ function PrizeCalculatorWinningNumber(props) {
   )
 }
 
-export default PrizeCalculatorWinningNumber;
+export default PrizeWinningNumber;
