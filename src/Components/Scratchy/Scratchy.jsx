@@ -61,34 +61,34 @@ class Scratchy extends React.Component {
       ],
       prizes: [
         [
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
       ],
     }
@@ -399,7 +399,10 @@ class Scratchy extends React.Component {
           "marginTop":"1%"
         }}>
         </div>
-        <YourPrizesDisplayPanel />
+        <YourPrizesDisplayPanel 
+          yourNumbers={this.state.yourNumbers}
+          prizes={this.state.prizes}
+        />
       </div>
     )
   }

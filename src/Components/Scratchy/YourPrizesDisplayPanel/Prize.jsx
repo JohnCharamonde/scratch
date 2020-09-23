@@ -16,13 +16,16 @@ function Prize(props) {
           //   "backgroundImage": "url(" + Background + ")",
           //   "fontSize":"150%"
         }}>
-            <PrizeWinningNumber />
+            <PrizeWinningNumber 
+              number={number.number}
+              text={number.text}
+            />
     
              <div style={{"height":"85%", "width":"13%", "marginLeft":"1%"}}><img src={EthereumIcon} alt="ETH" style={{"height":"100%"}} /></div>
             
             <div style={{"display":"flex", "marginLeft":"1%", "alignItems":"flex-end","justifyContent":"space-between", "fontSize":"150%", "height":"80%", "width":"70%"}}>
-                <div>ETH worth</div>
-                <div>≈ $50</div>
+                <div>{`${props.prize.unit} worth`}</div>
+                <div>{`≈ $${props.prize.dollarAmount}`}</div>
                 </div>
         </div>
     )

@@ -25,20 +25,34 @@ function PrizesByCategory(props) {
         "color":"RGB(255, 153, 204)",
         "fontWeight":"bolder"
       }}>
-        <sp>{props.category}</sp>
+        <sp>{props.type}</sp>
       </div>  
-      <Prize />
-      <div style={{
+
+      {
+        props.prizeCoordinates.map((prizeCoordinates) => {
+          <Prize 
+            prize={props.prizes[prizeCoordinates[0]][prizeCoordinates[1]]}
+            number={props.yourNumbers[prizeCoordinates[0]][prizeCoordinates[1]]}
+          />
+        })
+      }
+
+      {
+      props.type === 'CRYPTOCURRENCY' ?
+        <div style={{
         // "height":"15%",
         "marginTop":"2%",
         "width":"98%",
         "fontSize":"200%",
         "display":"flex",
         "justifyContent":"space-between"
-      }}>
-        <sp>TOTAL:</sp>
-        <sp>≈ $100</sp>
-    </div>
+        }}>
+          <sp>TOTAL:</sp>
+          <sp>{props.claimedCryptocurrencyTotal || "$0.00"}</sp>
+        </div>
+      :
+        ''
+      }
   </div>
   )
 }

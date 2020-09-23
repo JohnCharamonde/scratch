@@ -3,9 +3,33 @@ import coins from '../../../Images/coins.png'
 import PrizeCalculatorWinningNumber from './PrizeWinningNumber.jsx'
 import CryptoKittiesIcon from '../../../Images/CryptoKittiesIcon.png'
 import Background from '../../../Images/contours.png'
-import PrizesByCategory from './PrizesByCategory.jsx'
+import PrizesByType from './PrizesByType.jsx'
 
 function YourPrizesDisplayPanel(props) {
+  const coordinatesOfPrizesWonByType = props.yourNumbers.reduce((acc, yourNumbersRow, i) => {
+    yourNumbersRow.reduce((nestedAcc, yourNumber, j) => {
+      if(yourNumber.winStatus === 'win') {
+        if(props.prizes[i][j].type === 'cryptocurrency') {
+          acc.cryptocurrency.push([i, j])
+        } else {
+          acc.collectibles.push([i, j])
+        }
+      }
+      return nestedAcc;
+    })
+    return acc;
+  }, {cryptocurrency:[], collectibles:[]});
+
+  const claimedCryptocurrencyTotal = coordinatesOfPrizesWonByType.cryptocurrency.reduce((acc, coordinates) => {
+    const i = coordinates[0];
+    const j = coordinates[1];
+    if(props.prizes[i][j].hasBeenClaimed) {
+      acc += props.prizes[i][j].dollarAmount;
+    }
+    return acc;
+  }, 0);
+
+
   return(
     <div style={{
       "display":"flex",
@@ -23,15 +47,19 @@ function YourPrizesDisplayPanel(props) {
       "fontFamily":"Helvetica",
       "fontWeight":"bolder",
     }}>
-
-    <PrizesByCategory 
-       category={'CRYPTOCURRENCY'}
+    <PrizesByType
+       type={'CRYPTOCURRENCY'}
+       prizeCoordinates={coordinatesOfPrizesWonByType.cryptocurrency}
+       yourNumbers={props.yourNumbers}
+       prizes={props.prizes}
+       claimedCryptocurrencyTotal={claimedCryptocurrencyTotal}
     />
-
-    <PrizesByCategory 
-       category={'COLLECTIBLES'}
+    <PrizesByType
+       type={'COLLECTIBLES'}
+       prizeCoordinates={coordinatesOfPrizesWonByType.collectibles}
+       yourNumbers={props.yourNumbers}
+       prizes={props.prizes}
     />
-    
     </div>
   )
 }
