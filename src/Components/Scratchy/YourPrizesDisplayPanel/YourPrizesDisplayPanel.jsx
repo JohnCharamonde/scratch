@@ -7,7 +7,7 @@ import PrizesByType from './PrizesByType.jsx'
 
 function YourPrizesDisplayPanel(props) {
   const coordinatesOfPrizesWonByType = props.yourNumbers.reduce((acc, yourNumbersRow, i) => {
-    yourNumbersRow.reduce((nestedAcc, yourNumber, j) => {
+    yourNumbersRow.forEach((yourNumber, j) => {
       if(yourNumber.winStatus === 'win') {
         if(props.prizes[i][j].type === 'cryptocurrency') {
           acc.cryptocurrency.push([i, j])
@@ -15,11 +15,11 @@ function YourPrizesDisplayPanel(props) {
           acc.collectibles.push([i, j])
         }
       }
-      return nestedAcc;
     })
     return acc;
   }, {cryptocurrency:[], collectibles:[]});
 
+  console.log(coordinatesOfPrizesWonByType.cryptocurrency.length + coordinatesOfPrizesWonByType.collectibles.length)
 
   const claimedCryptocurrencyTotal = coordinatesOfPrizesWonByType.cryptocurrency.reduce((acc, coordinates) => {
     const i = coordinates[0];

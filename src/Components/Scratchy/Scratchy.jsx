@@ -29,33 +29,33 @@ class Scratchy extends React.Component {
       ],
       yourNumbers: [
         [
-          {number: 41, text: 'FRON', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 33, text: 'TRTR', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 28, text: 'TNET', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 19, text: 'NNTN', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'}
-        ],
-        [
-          {number: 23, text: 'TNTR', clipPathIndex:4, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 12, text: 'TWLV', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 8, text: 'EIGH', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 27, text: 'TNSV', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'}
-        ],
-        [
-          {number: 34, text: 'TRFR', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 40, text: 'FRTY', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
           {number: 9, text: 'NINE', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 48, text: 'FRET', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 45, text: 'FRFV', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'}
+          {number: 7, text: 'SEVN', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 30, text: 'TRTY', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 16, text: 'SXTN', clipPathIndex: 0, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 25, text: 'TNFV', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 26, text: 'TNSX', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 36, text: 'TRSX', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'}
+          {number: 7, text: 'SEVN', clipPathIndex:4, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 9, text: 'NINE', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 30, text: 'TRTY', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 20, text: 'TNTY', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 20, text: 'TNTY', clipPathIndex: 1, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 49, text: 'FRNN', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 11, text: 'ELVN', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 9, text: 'NINE', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 9, text: 'NINE', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 20, text: 'TNTY', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 20, text: 'TNTY', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'}
+        ],
+        [
+          {number: 9, text: 'NINE', clipPathIndex: 0, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 30, text: 'TRTY', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 40, text: 'FRTY', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 7, text: 'SEVN', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'}
+        ],
+        [
+          {number: 30, text: 'TRTY', clipPathIndex: 1, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 30, text: 'TRTY', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 30, text: 'TRTY', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
           {number: 20, text: 'TNTY', clipPathIndex: 0, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
       ],

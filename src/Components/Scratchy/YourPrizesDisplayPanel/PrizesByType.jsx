@@ -3,7 +3,6 @@ import Prize from './Prize.jsx'
 import Background from '../../../Images/contours.png'
 
 function PrizesByCategory(props) {
-  console.log(props.prizeCoordinates.length)
  return(      
     <div style={{
         "display":"flex",

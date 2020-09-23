@@ -3,7 +3,6 @@ import PrizeWinningNumber from './PrizeWinningNumber.jsx'
 import EthereumIcon from '../../../Images/ethereum-icon.png'
 
 function Prize(props) {
-    console.log(props)
     return (
         <div style={{
             "width":"98%",
