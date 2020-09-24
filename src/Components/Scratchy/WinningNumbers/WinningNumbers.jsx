@@ -8,7 +8,7 @@ function WinningNumbers(props) {
       "position": "absolute",
       "height": "11.6%",
       "width": "26.75%",
-      "left": "37.7%",
+      "left": "36.8%",
       "top": "15.5%",
     }}>
 

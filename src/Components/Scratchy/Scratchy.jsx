@@ -1,5 +1,5 @@
 import React from 'react';
-import skin from '../../Images/skin.png';
+import skin from '../../Images/skin2.png';
 import WinningNumbers from './WinningNumbers/WinningNumbers.jsx';
 import WinningNumbersButtons from './WinningNumbersButtons/WinningNumbersButtons.jsx'
 import WinningNumbersButtonsClicked from './WinningNumbersButtonsClicked/WinningNumbersButtonsClicked.jsx'
@@ -7,7 +7,7 @@ import YourNumbers from './YourNumbers/YourNumbers.jsx';
 import YourNumbersButtons from './YourNumbersButtons/YourNumbersButtons.jsx'
 import YourNumbersButtonsClicked from './YourNumbersButtonsClicked/YourNumbersButtonsClicked.jsx'
 import PersonalMessage from './PersonalMessage/PersonalMessage.jsx'
-import PrizeCalculator from './PrizeCalculator/PrizeCalculator.jsx'
+import YourPrizesDisplayPanel from './YourPrizesDisplayPanel/YourPrizesDisplayPanel.jsx'
 import UIfx from 'uifx';
 import bwongSound from '../../Sounds/bwongSound.mp3';
 import scratchSound from '../../Sounds/scratchSound.mp3';
@@ -29,66 +29,66 @@ class Scratchy extends React.Component {
       ],
       yourNumbers: [
         [
-          {number: 41, text: 'FRON', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 33, text: 'TRTR', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 28, text: 'TNET', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 19, text: 'NNTN', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'}
-        ],
-        [
-          {number: 23, text: 'TNTR', clipPathIndex:4, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 12, text: 'TWLV', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 8, text: 'EIGH', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 27, text: 'TNSV', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'}
-        ],
-        [
-          {number: 34, text: 'TRFR', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 40, text: 'FRTY', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
           {number: 9, text: 'NINE', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 48, text: 'FRET', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 45, text: 'FRFV', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'}
+          {number: 7, text: 'SEVN', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 30, text: 'TRTY', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 16, text: 'SXTN', clipPathIndex: 0, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 25, text: 'TNFV', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 26, text: 'TNSX', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 36, text: 'TRSX', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'}
+          {number: 7, text: 'SEVN', clipPathIndex:4, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 9, text: 'NINE', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 30, text: 'TRTY', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 20, text: 'TNTY', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
         [
-          {number: 20, text: 'TNTY', clipPathIndex: 1, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 49, text: 'FRNN', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
-          {number: 11, text: 'ELVN', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 9, text: 'NINE', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 9, text: 'NINE', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 20, text: 'TNTY', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 20, text: 'TNTY', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'}
+        ],
+        [
+          {number: 9, text: 'NINE', clipPathIndex: 0, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 30, text: 'TRTY', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 40, text: 'FRTY', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 7, text: 'SEVN', clipPathIndex: 4, audioVisualStatus: 0, winStatus: 'uncertain'}
+        ],
+        [
+          {number: 30, text: 'TRTY', clipPathIndex: 1, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 30, text: 'TRTY', clipPathIndex: 2, audioVisualStatus: 0, winStatus: 'uncertain'},
+          {number: 30, text: 'TRTY', clipPathIndex: 3, audioVisualStatus: 0, winStatus: 'uncertain'},
           {number: 20, text: 'TNTY', clipPathIndex: 0, audioVisualStatus: 0, winStatus: 'uncertain'}
         ],
       ],
       prizes: [
         [
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
         [
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
-          {type: 'Cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.25, dollarAmount: 100, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 1.0, dollarAmount: 400, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 2.0, dollarAmount: 800, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'},
+          {type: 'cryptocurrency', unit: "ETH", amount: 0.125, dollarAmount: 50, audioVisualStatus: 0, hasBeenClaimed: false, iconKey: 'eth'}
         ],
       ],
     }
@@ -366,7 +366,7 @@ class Scratchy extends React.Component {
   render() {
     return (
       <div style={{"position":"absolute","display":"flex", "justifyContent":"Center", "top": "6.5%"}}>
-        <img src={skin} alt="Skin" style={{"height": "60%", "width":"60%", "marginTop": "1%", "zIndex":"100"}}/>
+        <img src={skin} alt="Skin" style={{"height": "90%", "width":"90%", "marginTop": "1%", "zIndex":"100"}}/>
         <WinningNumbers 
           winningNumbers={this.state.winningNumbers}
         />
@@ -392,14 +392,10 @@ class Scratchy extends React.Component {
           prizes={this.state.prizes}
         />
         <PersonalMessage />
-        <div style={{
-          "display":"flex",
-          "backgroundColor":"rgb(25, 24, 27)",
-          "width":"27.4%",
-          "marginTop":"1%"
-        }}>
-        </div>
-        <PrizeCalculator />
+        <YourPrizesDisplayPanel 
+          yourNumbers={this.state.yourNumbers}
+          prizes={this.state.prizes}
+        />
       </div>
     )
   }

@@ -8,8 +8,8 @@ function YourNumbers(props) {
       "position":"absolute",
       "height": "54.7%",
       "width":"26.76%",
-      "left":"37.46%",
-      "top":"33.4%",
+      "left":"36.6%",
+      "top":"34.2%",
       "backgroundColor":"transparent",
       "zIndex":"150"
     }}>
