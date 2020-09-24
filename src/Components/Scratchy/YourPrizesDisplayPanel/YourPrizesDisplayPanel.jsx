@@ -49,14 +49,14 @@ function YourPrizesDisplayPanel(props) {
       "zIndex":"150"
     }}>
     <PrizesByType
-       type={'CRYPTOCURRENCY'}
+       type={'Cryptocurrency'}
        prizeCoordinates={coordinatesOfPrizesWonByType.cryptocurrency}
        yourNumbers={props.yourNumbers}
        prizes={props.prizes}
        claimedCryptocurrencyTotal={claimedCryptocurrencyTotal}
     />
     <PrizesByType
-       type={'COLLECTIBLES'}
+       type={'Collectibles'}
        prizeCoordinates={coordinatesOfPrizesWonByType.collectibles}
        yourNumbers={props.yourNumbers}
        prizes={props.prizes}

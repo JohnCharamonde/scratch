@@ -9,20 +9,25 @@ function PrizesByCategory(props) {
         "flexDirection":"column",
         "alignItems": "center",
         "width":"98%",
-        "backgroundColor":"RGB(80, 80, 80)",
+        "backgroundColor":"RGB(0, 0, 0, .6)",
         // "backgroundColor":"black",
         "color":"white",
         "marginTop": "1%",
-        "outline":".1px solid gray",
+        "marginBottom":"1%",
+        "outline":"2px solid white",
         "backgroundImage": "url(" + Background + ")",
     }}>
 
       <div style={{
-        "width":"98%",
+        "display":"flex",
+        "justifyContent":"center",
+        "alignItems":"center",
+        "width":"100%",
         "marginTop":"2%",
         "fontSize":"200%",
-        "borderBottom":".1px solid gray",
-        "color":"RGB(255, 153, 204)",
+        "borderBottom":"2px solid white",
+        // "color":"RGB(255, 153, 204)",
+        "color":"white",
         "fontWeight":"bolder"
       }}>
         <div>{props.type}</div>
@@ -38,7 +43,7 @@ function PrizesByCategory(props) {
       }
 
       {
-      props.type === 'CRYPTOCURRENCY' ?
+      props.type === 'Cryptocurrency' ?
         <div style={{
         // "height":"15%",
         "marginTop":"2%",
