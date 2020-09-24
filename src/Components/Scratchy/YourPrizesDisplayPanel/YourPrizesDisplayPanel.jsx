@@ -19,7 +19,7 @@ function YourPrizesDisplayPanel(props) {
     return acc;
   }, {cryptocurrency:[], collectibles:[]});
 
-  console.log(coordinatesOfPrizesWonByType.cryptocurrency.length + coordinatesOfPrizesWonByType.collectibles.length)
+
 
   const claimedCryptocurrencyTotal = coordinatesOfPrizesWonByType.cryptocurrency.reduce((acc, coordinates) => {
     const i = coordinates[0];
@@ -37,16 +37,16 @@ function YourPrizesDisplayPanel(props) {
       "flexDirection":"column",
       "alignItems":"center",
       "position":"absolute",
-      "backgroundImage": "url(" + coins + ")",
-      "height":"72.7%",
-      "width": "26.8%",
-      "left":"66.92%",
-      "top": "15.5%",
+      "height":"71.55%",
+      "width": "26.4%",
+      "left":"66.6%",
+      "top": "16.45%",
       "flexWrap":"nowrap",
       "overflow":"scroll",
       "outline":".1px solid gray",
       "fontFamily":"Helvetica",
       "fontWeight":"bolder",
+      "zIndex":"150"
     }}>
     <PrizesByType
        type={'CRYPTOCURRENCY'}

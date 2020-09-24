@@ -1,5 +1,5 @@
 import React from 'react';
-import skin from '../../Images/skin.png';
+import skin from '../../Images/skin2.png';
 import WinningNumbers from './WinningNumbers/WinningNumbers.jsx';
 import WinningNumbersButtons from './WinningNumbersButtons/WinningNumbersButtons.jsx'
 import WinningNumbersButtonsClicked from './WinningNumbersButtonsClicked/WinningNumbersButtonsClicked.jsx'
@@ -366,7 +366,7 @@ class Scratchy extends React.Component {
   render() {
     return (
       <div style={{"position":"absolute","display":"flex", "justifyContent":"Center", "top": "6.5%"}}>
-        <img src={skin} alt="Skin" style={{"height": "60%", "width":"60%", "marginTop": "1%", "zIndex":"100"}}/>
+        <img src={skin} alt="Skin" style={{"height": "90%", "width":"90%", "marginTop": "1%", "zIndex":"100"}}/>
         <WinningNumbers 
           winningNumbers={this.state.winningNumbers}
         />
@@ -392,13 +392,6 @@ class Scratchy extends React.Component {
           prizes={this.state.prizes}
         />
         <PersonalMessage />
-        <div style={{
-          "display":"flex",
-          "backgroundColor":"rgb(25, 24, 27)",
-          "width":"27.4%",
-          "marginTop":"1%"
-        }}>
-        </div>
         <YourPrizesDisplayPanel 
           yourNumbers={this.state.yourNumbers}
           prizes={this.state.prizes}
