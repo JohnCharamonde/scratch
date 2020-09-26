@@ -1,5 +1,6 @@
 import React from 'react';
-import Prize from './Prize.jsx'
+import ClaimedPrize from './ClaimedPrize.jsx'
+import UnclaimedPrize from './UnclaimedPrize.jsx'
 import Background from '../../../Images/contours.png'
 
 function PrizesByCategory(props) {
@@ -35,9 +36,17 @@ function PrizesByCategory(props) {
 
       {
         props.prizeCoordinates.map((prizeCoordinatesPair) => 
-          <Prize 
+          props.prizes[prizeCoordinatesPair[0]][prizeCoordinatesPair[1]].hasBeenClaimed ?
+          <ClaimedPrize 
             prize={props.prizes[prizeCoordinatesPair[0]][prizeCoordinatesPair[1]]}
             number={props.yourNumbers[prizeCoordinatesPair[0]][prizeCoordinatesPair[1]]}
+          />
+          :
+          <UnclaimedPrize
+            number={props.yourNumbers[prizeCoordinatesPair[0]][prizeCoordinatesPair[1]].number}
+            text={props.yourNumbers[prizeCoordinatesPair[0]][prizeCoordinatesPair[1]].text}
+            i={prizeCoordinatesPair[0]}
+            j={prizeCoordinatesPair[1]}
           />
         )
       }

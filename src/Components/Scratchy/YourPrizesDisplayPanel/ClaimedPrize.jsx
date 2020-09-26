@@ -2,7 +2,7 @@ import React from 'react';
 import PrizeWinningNumber from './PrizeWinningNumber.jsx'
 import EthereumIcon from '../../../Images/ethereum-icon.png'
 
-function Prize(props) {
+function ClaimedPrize(props) {
     return (
         <div style={{
             "width":"98%",
@@ -31,5 +31,5 @@ function Prize(props) {
     )
 }
 
-export default Prize;
+export default ClaimedPrize;
 

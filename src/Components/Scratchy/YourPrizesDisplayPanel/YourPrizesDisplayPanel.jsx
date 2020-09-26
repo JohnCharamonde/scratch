@@ -1,8 +1,4 @@
 import React from 'react';
-import coins from '../../../Images/coins.png'
-import PrizeCalculatorWinningNumber from './PrizeWinningNumber.jsx'
-import CryptoKittiesIcon from '../../../Images/CryptoKittiesIcon.png'
-import Background from '../../../Images/contours.png'
 import PrizesByType from './PrizesByType.jsx'
 
 function YourPrizesDisplayPanel(props) {
