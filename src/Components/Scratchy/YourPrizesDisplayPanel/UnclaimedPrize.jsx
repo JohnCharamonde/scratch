@@ -1,8 +1,8 @@
 import React from 'react';
 import PrizeWinningNumber from './PrizeWinningNumber.jsx'
-import EthereumIcon from '../../../Images/ethereum-icon.png'
+import iris from "../../../Images/iris.jpeg"
 
-function Prize(props) {
+function UnclaimedPrize(props) {
     return (
         <div style={{
             "width":"98%",
@@ -17,19 +17,17 @@ function Prize(props) {
           //   "fontSize":"150%"
         }}>
             <PrizeWinningNumber 
-              number={props.number.number}
-              text={props.number.text}
+              number={props.number}
+              text={props.text}
             />
     
-             <div style={{"height":"85%", "width":"13%", "marginLeft":"1%"}}><img src={EthereumIcon} alt="ETH" style={{"height":"100%"}} /></div>
+             <div style={{"height":"85%", "width":"13%", "marginLeft":"1%"}}><img src={iris} alt="perhaps" style={{"height":"100%"}} /></div>
             
             <div style={{"display":"flex", "marginLeft":"1%", "alignItems":"center","justifyContent":"space-between", "fontSize":"150%", "height":"80%", "width":"70%"}}>
-                <div>{props.prize.unit}</div>
-                <div>{`≈ $${props.prize.dollarAmount}`}</div>
+          CLICK HERE!
                 </div>
         </div>
     )
 }
 
-export default Prize;
-
+export default UnclaimedPrize
