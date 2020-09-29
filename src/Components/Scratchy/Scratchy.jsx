@@ -363,6 +363,16 @@ class Scratchy extends React.Component {
     })
   }
 
+  handlePrizeDisplayPanelUnclaimedPrizeButtonClick(e, i, j) {
+    let newPrizes = this.state.prizes;
+    newPrizes[i][j].hasBeenClaimed = true;
+    this.setState({
+      prizes: newPrizes
+    })
+    // TODO => OPEN PRIZE SHOWCASE
+    alert('OPEN PRIZE SHOWCASE')
+  }
+
   render() {
     return (
       <div style={{"position":"absolute","display":"flex", "justifyContent":"Center", "top": "6.5%"}}>
@@ -395,6 +405,7 @@ class Scratchy extends React.Component {
         <YourPrizesDisplayPanel 
           yourNumbers={this.state.yourNumbers}
           prizes={this.state.prizes}
+          handlePrizeDisplayPanelUnclaimedPrizeButtonClick={this.handlePrizeDisplayPanelUnclaimedPrizeButtonClick.bind(this)}
         />
       </div>
     )

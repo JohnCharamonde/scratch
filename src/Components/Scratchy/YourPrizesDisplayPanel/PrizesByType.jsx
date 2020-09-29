@@ -47,6 +47,7 @@ function PrizesByCategory(props) {
             text={props.yourNumbers[prizeCoordinatesPair[0]][prizeCoordinatesPair[1]].text}
             i={prizeCoordinatesPair[0]}
             j={prizeCoordinatesPair[1]}
+            handlePrizeDisplayPanelUnclaimedPrizeButtonClick={props.handlePrizeDisplayPanelUnclaimedPrizeButtonClick}
           />
         )
       }
