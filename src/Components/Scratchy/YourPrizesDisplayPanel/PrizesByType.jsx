@@ -4,7 +4,16 @@ import UnclaimedPrize from './UnclaimedPrize.jsx'
 import Background from '../../../Images/contours.png'
 
 function PrizesByCategory(props) {
- return(      
+  const wonPrizesContainsUnclaimedPrize = props.prizeCoordinates.reduce((acc, coordinatesPair) => {
+    const isWin = props.yourNumbers[coordinatesPair[0]][coordinatesPair[1]].winStatus === 'win';
+    const hasBeenClaimed = props.prizes[coordinatesPair[0]][coordinatesPair[1]].hasBeenClaimed;
+    if(isWin && !hasBeenClaimed) {
+      acc = true;
+    }
+    return acc;
+  }, false);
+
+  return(         
     <div style={{
         "display":"flex",
         "flexDirection":"column",
@@ -63,7 +72,11 @@ function PrizesByCategory(props) {
         "justifyContent":"space-between"
         }}>
           <div>TOTAL:</div>
+          {wonPrizesContainsUnclaimedPrize ?
+            <div>...</div>
+          :
           <div>{props.claimedCryptocurrencyTotal || "$0.00"}</div>
+        }
         </div>
       :
         ''
