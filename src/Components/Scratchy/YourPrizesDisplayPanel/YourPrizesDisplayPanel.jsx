@@ -50,12 +50,14 @@ function YourPrizesDisplayPanel(props) {
        yourNumbers={props.yourNumbers}
        prizes={props.prizes}
        claimedCryptocurrencyTotal={claimedCryptocurrencyTotal}
+       handlePrizeDisplayPanelUnclaimedPrizeButtonClick={props.handlePrizeDisplayPanelUnclaimedPrizeButtonClick}
     />
     <PrizesByType
        type={'Collectibles'}
        prizeCoordinates={coordinatesOfPrizesWonByType.collectibles}
        yourNumbers={props.yourNumbers}
        prizes={props.prizes}
+       handlePrizeDisplayPanelUnclaimedPrizeButtonClick={props.handlePrizeDisplayPanelUnclaimedPrizeButtonClick}
     />
     </div>
   )
