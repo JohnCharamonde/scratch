@@ -8,6 +8,8 @@ import YourNumbersButtons from './YourNumbersButtons/YourNumbersButtons.jsx'
 import YourNumbersButtonsClicked from './YourNumbersButtonsClicked/YourNumbersButtonsClicked.jsx'
 import PersonalMessage from './PersonalMessage/PersonalMessage.jsx'
 import YourPrizesDisplayPanel from './YourPrizesDisplayPanel/YourPrizesDisplayPanel.jsx'
+import PrizeShowcase from './PrizeShowcase/PrizeShowcase.jsx'
+
 import UIfx from 'uifx';
 import bwongSound from '../../Sounds/bwongSound.mp3';
 import scratchSound from '../../Sounds/scratchSound.mp3';
@@ -406,6 +408,9 @@ class Scratchy extends React.Component {
           yourNumbers={this.state.yourNumbers}
           prizes={this.state.prizes}
           handlePrizeDisplayPanelUnclaimedPrizeButtonClick={this.handlePrizeDisplayPanelUnclaimedPrizeButtonClick.bind(this)}
+        />
+        <PrizeShowcase 
+        isActive={true}
         />
       </div>
     )
