@@ -7,11 +7,11 @@ function PrizeShowcase(props) {
       <div
       style={{
         "position":"absolute",
-        "left":"30%",
-        "top":"15%",
+        "left":"36.25%",
+        "top":"15.05%",
         "backgroundColor":"orange",
-        "height":"30%",
-        "width":"25%",
+        "height":"74.7%",
+        "width":"27.55%",
         "zIndex":"500"
       }}>
       hey what's up!
